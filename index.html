@@ -4,70 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <title>MD. Moinul Islam - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>MD. Moinul Islam</h1>
-        <p>Backend Engineer specializing in PHP, Laravel, and more</p>
-        <nav>
-            <a href="#about">About</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#experience">Experience</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-20 text-center">
+        <img src="moinul.png" alt="Profile" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg">
+        <h1 class="text-4xl font-bold mt-4">MD. Moinul Islam</h1>
+        <p class="mt-2 text-lg">🚀 Backend Engineer | Laravel, PHP | NestJS, Node.js | Next.js, React, Javascript</p>
+        <a href="#contact"
+            class="mt-4 inline-block bg-white text-purple-600 px-6 py-2 rounded-full shadow hover:bg-purple-100">Contact
+            Me</a>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Back-End Engineer with 4+ years’ industry experience building web applications.</p>
+    <section id="about" class="py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+            <p class="text-lg leading-relaxed">I am a dedicated Back-End Engineer with 4+ years of experience in
+                developing scalable, high-performance web applications. Skilled in PHP, Laravel, React, NodeJS, and
+                modern frameworks, I love solving complex problems and delivering elegant solutions. I actively
+                contribute to both SaaS and ecommerce platforms and enjoy collaborating with teams. Outside of coding, I
+                enjoy mentoring, learning new tech, and contributing to open-source projects.</p>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>PHP, Laravel, Lumen</li>
-            <li>JavaScript, Node.js, NestJS</li>
-            <li>React, Next.js, Vue.js, Redux</li>
-            <li>REST, JSON, Ajax, jQuery</li>
-            <li>MySQL, PostgreSQL, Redis</li>
-            <li>Docker (Familiarity)</li>
-        </ul>
+    <section id="skills" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-purple-100 p-4 rounded shadow">PHP</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Laravel, Lumen</div>
+                <div class="bg-purple-100 p-4 rounded shadow">NodeJS, NestJS</div>
+                <div class="bg-purple-100 p-4 rounded shadow">React, Next.js, Vue.js</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Redux, jQuery</div>
+                <div class="bg-purple-100 p-4 rounded shadow">MySQL, PostgreSQL</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Redis</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Docker (Familiarity)</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Git, Jira, Trello</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Apache, Nginx</div>
+                <div class="bg-purple-100 p-4 rounded shadow">REST APIs, JSON</div>
+                <div class="bg-purple-100 p-4 rounded shadow">Bootstrap, Tailwind</div>
+            </div>
+        </div>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <p><strong>Software Engineer</strong>, Amharch Tech, Dublin (Jan 2022 – Present)</p>
-        <p>Backend engineer developing scalable web apps, collaborating with teams, exploring new tech.</p>
-        <p><strong>Web Developer</strong>, Amharch Tech, Dublin (Jun 2021 – Dec 2021)</p>
-        <p>Built and maintained web apps individually and in teams.</p>
-        <p><strong>Junior Web Developer</strong>, RD Network BD, Dhaka (Feb 2020 – May 2021)</p>
-        <p>Delivered assigned modules and standalone apps.</p>
+    <section id="experience" class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8">Experience</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-xl font-bold">Software Engineer - <a href="https://amharctech.com/" target="_blank"
+                            class="text-blue-600">Amharch Tech</a></h3>
+                    <p class="text-sm text-gray-500">Dublin, Ireland | Jan 2022 – Present</p>
+                    <p>Building scalable web applications, developing Inventory, Rota, Subscription System, Ebaskat
+                        ecommerce, and maintaining microservices with NestJS.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-xl font-bold">Web Developer - <a href="https://amharctech.com/" target="_blank"
+                            class="text-blue-600">Amharch Tech</a></h3>
+                    <p class="text-sm text-gray-500">Dublin, Ireland | Jun 2021 – Dec 2021</p>
+                    <p>Built and maintained web apps such as Village Cafe, Cafe Marmalade, and core modules for internal
+                        SaaS products.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="text-xl font-bold">Junior Web Developer - <a href="https://www.rdnetworkbd.com/"
+                            target="_blank" class="text-blue-600">RD Network BD</a></h3>
+                    <p class="text-sm text-gray-500">Dhaka, Bangladesh | Feb 2020 – May 2021</p>
+                    <p>Developed modules like Inventory POS, Invoice Management, Fisheries, HR Logistic, Car Management,
+                        Courier Management.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Subscription System:</strong> Laravel, Inertia.js, React.js, Stripe</li>
-            <li><strong>Quotation-MS:</strong> PHP, Laravel</li>
-            <li><strong>Form Builder:</strong> PHP, Laravel</li>
-            <li><strong>Mail Service:</strong> PHP, Lumen, Queue</li>
-            <li><strong>Ebaskat (Ecommerce):</strong> PHP, Laravel, jQuery, Bootstrap</li>
-        </ul>
+    <section id="projects" class="py-16">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Subscription System</h3>
+                    <p class="text-sm text-gray-600">Admin panel for managing subscription plans, integrated with Stripe
+                        for payments. SPA using Inertia.js + React.</p>
+                    <p class="text-sm"><strong>Tech:</strong> Laravel, Inertia.js, React.js, Stripe</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Quotation-MS</h3>
+                    <p class="text-sm text-gray-600">Quotation module in a SaaS platform with REST APIs for quotation
+                        management.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Form Builder</h3>
+                    <p class="text-sm text-gray-600">Dynamic form creation with full API support for SaaS apps.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Mail Service</h3>
+                    <p class="text-sm text-gray-600">Microservice for sending transactional and promotional emails.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Lumen, Queue, Cron</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Ebaskat</h3>
+                    <p class="text-sm text-gray-600">Ecommerce platform with dropshipping from AliExpress, featuring
+                        custom data sync service.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel, jQuery, Bootstrap</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Village Cafe</h3>
+                    <p class="text-sm text-gray-600">Online restaurant system for orders and reservations.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel, jQuery, Ajax, Bootstrap</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Data Sync Service</h3>
+                    <p class="text-sm text-gray-600">Background service syncing data between Ebaskat and AliExpress.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Lumen, jQuery, Queue, Cron</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h3 class="font-bold text-lg">Other Contributions</h3>
+                    <p class="text-sm text-gray-600">Magica-Maids, Browne Solar, Agua Clean, I Dare Space, Amharc Tech
+                        V4, Irish Steel, etc.</p>
+                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel, various stacks</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: moinulibr@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/moinulibr">moinulibr</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/moinulibr">in/moinulibr</a></p>
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+            <p class="mb-2">Email: <a href="mailto:moinulibr@gmail.com" class="text-blue-600">moinulibr@gmail.com</a>
+            </p>
+            <p class="mb-2">Phone: +8801712794033</p>
+            <p class="mb-2">GitHub: <a href="https://github.com/moinulibr" class="text-blue-600">moinulibr</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/moinulibr" class="text-blue-600">in/moinulibr</a></p>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 MD. Moinul Islam</p>
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 MD. Moinul Islam | Designed with ❤️</p>
     </footer>
+
 </body>
 
 </html>
