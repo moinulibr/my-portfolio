@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moinul | Senior Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        /* Image Section Styling */
+        .profile-container {
+            position: relative;
+            width: 320px;
+            height: 400px;
+            border-radius: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Timeline Alignment Fix */
+        .timeline-container {
+            border-left: 2px solid rgba(16, 185, 129, 0.2);
+            margin-left: 20px;
+            padding-left: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 50px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -44px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #10b981;
+        }
+
+        input,
+        textarea {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            color: white !important;
+        }
+
+        input:focus {
+            border-color: #10b981 !important;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md px-6 md:px-20 py-5 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-tighter uppercase">MOINUL<span class="accent-green">.ENG</span>
+        </div>
+        <div class="hidden md:flex space-x-10 text-[11px] font-bold tracking-widest uppercase text-gray-400">
+            <a href="#home" class="hover:text-emerald-400 transition">Home</a>
+            <a href="#about" class="hover:text-emerald-400 transition">About</a>
+            <a href="#skills" class="hover:text-emerald-400 transition">Arsenal</a>
+            <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-emerald-400 transition text-emerald-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero + About Section Integrated -->
+    <section id="home"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-32 pt-32 gap-16">
+        <!-- Left Side: Image -->
+        <div class="flex-shrink-0">
+            <div class="profile-container shadow-2xl shadow-emerald-900/20">
+                <!-- Image source placeholder -->
+                <img src="your-image-path.jpg" alt="Moinul Islam">
+            </div>
+        </div>
+
+        <!-- Right Side: Text & Content -->
+        <div class="flex-1 text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[1.1]">
+                High-Performance <br> <span class="accent-green">Scalable</span> Logic
+            </h1>
+            <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-2xl">
+                As a Backend Architect, I specialize in building horizontally scalable systems. I have 4+ years of
+                experience in microservices, database sharding (OmniShard), and real-time data synchronization.
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="#projects"
+                    class="bg-emerald-600 px-10 py-4 rounded-full font-bold text-sm hover:bg-emerald-500 transition">My
+                    Lab</a>
+                <a href="#contact"
+                    class="glass-card px-10 py-4 rounded-full font-bold text-sm hover:bg-white/5 transition">Let's
+                    Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section (Fixed Alignment) -->
+    <section id="experience" class="py-32 px-6 max-w-4xl mx-auto">
+        <h3 class="text-4xl font-black mb-20 text-center uppercase tracking-widest italic">Experience <span
+                class="accent-green">Timeline</span></h3>
+
+        <div class="timeline-container">
+            <!-- Dublin Experience -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <span class="text-emerald-500 font-bold text-xs tracking-widest uppercase">2023 - Present</span>
+                    <h4 class="text-2xl font-bold mt-2">Software Engineer</h4>
+                    <p class="text-gray-400 font-medium mb-4">Amharc Tech (Remote - Dublin, Ireland)</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        UK ebong Ireland market er jonno microservice architecture ebong massive SaaS infrastructure
+                        design ebong manage korchi.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dhaka Experience -->
+            <div class="timeline-item">
+                <div class="timeline-dot" style="background: #333; box-shadow: none;"></div>
+                <div class="glass-card p-8 rounded-3xl border-transparent">
+                    <span class="text-gray-600 font-bold text-xs tracking-widest uppercase">2021 - 2023</span>
+                    <h4 class="text-2xl font-bold mt-2 text-gray-300">Junior Software Engineer</h4>
+                    <p class="text-gray-500 font-medium mb-4">RD Network BD (Dhaka, Bangladesh)</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Logistics ebong inventory management system er backend develop kora ebong SQL query optimize
+                        kora chilo amar prodhan kaj.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Full-Width Split Layout like Screenshot 1) -->
+    <section id="contact" class="py-32 px-6 md:px-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+            <!-- Left: Info Area -->
+            <div class="glass-card p-12 rounded-[2.5rem] bg-emerald-950/10">
+                <h3 class="text-4xl font-black mb-8">Get in <span class="accent-green">Touch</span></h3>
+                <p class="text-gray-400 mb-12">Collaborations ba freelancer opportunities er jonno reach out korte
+                    paren. Let's build something amazing together.</p>
+
+                <div class="space-y-10">
+                    <div>
+                        <p class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-2">Email Me</p>
+                        <p class="text-xl font-bold">moinulibr@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-2">Call Me</p>
+                        <p class="text-xl font-bold">+880 171 279 4033</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-4">Social
+                            Connect</p>
+                        <div class="flex gap-6 text-2xl">
+                            <a href="#" class="hover:text-emerald-500 transition"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="#" class="hover:text-emerald-500 transition"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form Area (Full Width Input Fields) -->
+            <div class="glass-card p-12 rounded-[2.5rem]">
+                <form class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold uppercase text-gray-500 ml-2">Name</label>
+                        <input type="text" required class="w-full px-6 py-4 rounded-2xl transition-all"
+                            placeholder="Enter your full name">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold uppercase text-gray-500 ml-2">Email</label>
+                        <input type="email" required class="w-full px-6 py-4 rounded-2xl transition-all"
+                            placeholder="yourname@example.com">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold uppercase text-gray-500 ml-2">Phone Number</label>
+                        <input type="tel" required class="w-full px-6 py-4 rounded-2xl transition-all"
+                            placeholder="+880 1*********">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold uppercase text-gray-500 ml-2">Message</label>
+                        <textarea required rows="4" class="w-full px-6 py-4 rounded-2xl transition-all"
+                            placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-5 rounded-2xl transition-all shadow-xl shadow-emerald-900/20 mt-4 tracking-widest text-xs">SEND
+                        MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] font-bold text-gray-700 tracking-[0.5em] uppercase">
+        MD. MOINUL ISLAM &copy; 2026 | BUILT FOR PERFORMANCE
+    </footer>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Senior Backend Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030303;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px -20px rgba(16, 185, 129, 0.3);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-chip {
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            transition: all 0.3s;
+        }
+
+        .skill-chip:hover {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            transform: scale(1.05);
+        }
+
+        input,
+        textarea {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            color: white !important;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #10b981 !important;
+            outline: none;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
+        }
+
+        #canvas-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas-bg"></canvas>
+
+    
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-tighter uppercase">MOINUL<span class="accent-green">.ENG</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-[11px] font-bold tracking-widest uppercase text-gray-400">
+            <a href="#home" class="hover:text-emerald-400 transition">Home</a>
+            <a href="#skills" class="hover:text-emerald-400 transition">Arsenal</a>
+            <a href="#experience" class="hover:text-emerald-400 transition">Journey</a>
+            <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-emerald-400 transition text-emerald-500">Contact</a>
+        </div>
+    </nav>
+
+   
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-tight">
+            High-Performance <br> <span id="typing-text" class="gradient-text"></span>
+        </h1>
+        <p class="max-w-2xl text-gray-500 text-lg mb-10">
+            Md. Moinul Islam — Expert in building horizontally scalable backend systems, microservices, and high-load
+            data sharding solutions.
+        </p>
+        <div class="flex space-x-4">
+            <a href="#projects"
+                class="bg-emerald-600 px-8 py-4 rounded-full font-bold text-sm hover:bg-emerald-500 transition">View
+                Portfolio</a>
+            <a href="#contact"
+                class="glass-card px-8 py-4 rounded-full font-bold text-sm hover:bg-white/5 transition">Hire Me</a>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-32 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+            <h3 class="text-4xl font-black mb-4 uppercase">Technical <span class="accent-green">Arsenal</span></h3>
+            <p class="text-gray-500">Deep expertise in backend ecosystems and distributed architecture.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+           
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up">
+                <i class="fa-solid fa-code text-3xl accent-green mb-6"></i>
+                <h4 class="font-bold mb-4">Backend</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">PHP (Laravel)</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">Node.js (NestJS)</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">Python</span>
+                </div>
+            </div>
+
+           
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-solid fa-database text-3xl accent-green mb-6"></i>
+                <h4 class="font-bold mb-4">Databases</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">MySQL Sharding</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">Redis Cluster</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">PostgreSQL</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">MongoDB</span>
+                </div>
+            </div>
+
+            
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-layer-group text-3xl accent-green mb-6"></i>
+                <h4 class="font-bold mb-4">Frontend</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">React.js</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">Next.js</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">TailwindCSS</span>
+                </div>
+            </div>
+
+          
+            <div class="glass-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-server text-3xl accent-green mb-6"></i>
+                <h4 class="font-bold mb-4">Ops & Tools</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">Docker</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">Nginx/Apache</span>
+                    <span class="skill-chip text-[10px] px-3 py-1 rounded-full">CI/CD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-black mb-16 text-center">Experience <span class="accent-green">Timeline</span></h3>
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l-2 border-emerald-500/30" data-aos="fade-left">
+                <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1"></div>
+                <h4 class="text-xl font-bold">Software Engineer</h4>
+                <p class="text-emerald-500 text-sm mb-2">Amharc Tech (Remote - Dublin, Ireland)</p>
+                <p class="text-gray-500 text-sm">Building massive SaaS infrastructures and microservices for the
+                    UK/Ireland market.</p>
+            </div>
+            <div class="relative pl-8 border-l-2 border-white/10" data-aos="fade-left" data-aos-delay="100">
+                <div class="absolute w-4 h-4 bg-gray-800 rounded-full -left-[9px] top-1"></div>
+                <h4 class="text-xl font-bold text-gray-400">Junior Software Engineer</h4>
+                <p class="text-gray-600 text-sm mb-2">RD Network BD (Dhaka, Bangladesh)</p>
+                <p class="text-gray-600 text-sm">Developed logistics and inventory management modules.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 max-w-6xl mx-auto">
+        <h3 class="text-4xl font-black mb-16 text-center">Featured <span class="accent-green">Lab</span></h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="glass-card p-6 rounded-3xl" data-aos="zoom-in">
+                <h4 class="text-xl font-bold mb-2">OmniShard-1B</h4>
+                <p class="text-gray-500 text-[13px] mb-4">Architecture for handling 1 Billion+ records with MySQL
+                    sharding.</p>
+                <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">Sharding • MySQL</span>
+            </div>
+           
+            <div class="glass-card p-6 rounded-3xl" data-aos="zoom-in" data-aos-delay="100">
+                <h4 class="text-xl font-bold mb-2">Ebaskat Automation</h4>
+                <p class="text-gray-500 text-[13px] mb-4">Real-time sync between AliExpress, BigBuy and local stores.
+                </p>
+                <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">API • Queues •
+                    Redis</span>
+            </div>
+            
+            <div class="glass-card p-6 rounded-3xl" data-aos="zoom-in" data-aos-delay="200">
+                <h4 class="text-xl font-bold mb-2">AT SMS SaaS</h4>
+                <p class="text-gray-500 text-[13px] mb-4">Enterprise level microservice platform for Job management.</p>
+                <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">NestJS •
+                    Microservices</span>
+            </div>
+            
+            <div class="glass-card p-6 rounded-3xl" data-aos="zoom-in">
+                <h4 class="text-xl font-bold mb-2">Village Cafe POS</h4>
+                <p class="text-gray-500 text-[13px] mb-4">Modern restaurant POS with real-time analytics.</p>
+                <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">Laravel •
+                    WebSockets</span>
+            </div>
+           
+            <div class="glass-card p-6 rounded-3xl" data-aos="zoom-in" data-aos-delay="100">
+                <h4 class="text-xl font-bold mb-2">Offline Voter List</h4>
+                <p class="text-gray-500 text-[13px] mb-4">Offline mobile search for 2M+ records using IndexedDB.</p>
+                <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">Capacitor •
+                    IndexedDB</span>
+            </div>
+            
+            <div class="glass-card p-6 rounded-3xl" data-aos="zoom-in" data-aos-delay="200">
+                <h4 class="text-xl font-bold mb-2">Flight Engine</h4>
+                <p class="text-gray-500 text-[13px] mb-4">Flight search engine integrated with Duffel API.</p>
+                <span class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">API Integration •
+                    NestJS</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="py-32 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+           
+            <div data-aos="fade-right">
+                <h3 class="text-5xl font-black mb-8 leading-tight">Get in <span class="accent-green">Touch.</span></h3>
+                <p class="text-gray-500 text-lg mb-12">Feel free to reach out for collaborations, freelance
+                    opportunities, or just a friendly hello!</p>
+
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-6 group">
+                        <div
+                            class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-600 uppercase">Email</p>
+                            <a href="mailto:moinulibr@gmail.com"
+                                class="text-lg hover:text-emerald-400 transition">moinulibr@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-6 group">
+                        <div
+                            class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-600 uppercase">Phone</p>
+                            <p class="text-lg">+880 171 279 4033</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-6 group">
+                        <div
+                            class="w-12 h-12 glass-card rounded-full flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-600 uppercase">Connect</p>
+                            <div class="space-x-4">
+                                <a href="https://github.com/moinulibr"
+                                    class="hover:text-emerald-400 transition">GitHub</a>
+                                <a href="https://linkedin.com/in/moinulibr"
+                                    class="hover:text-emerald-400 transition">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="glass-card p-10 rounded-[3rem]" data-aos="fade-left">
+                <form action="https://formspree.io/f/xyzjgkgk" method="POST" class="space-y-5">
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <input type="text" name="name" placeholder="Full Name" required
+                            class="w-full px-6 py-4 rounded-2xl">
+                        <input type="email" name="email" placeholder="Email Address" required
+                            class="w-full px-6 py-4 rounded-2xl">
+                    </div>
+                    <input type="tel" name="phone" placeholder="Phone Number (Mandatory)" required
+                        class="w-full px-6 py-4 rounded-2xl">
+                    <textarea name="message" placeholder="Your Project/Inquiry Detail..." rows="5" required
+                        class="w-full px-6 py-4 rounded-2xl"></textarea>
+                    <button type="submit"
+                        class="w-full bg-emerald-600 text-white font-bold py-5 rounded-2xl hover:bg-emerald-500 shadow-xl shadow-emerald-600/30 transition-all active:scale-95">SEND
+                        ENQUIRY</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] font-bold text-gray-700 tracking-[0.5em] uppercase">
+        MD. MOINUL ISLAM &copy; 2026 | BUILT FOR PERFORMANCE
+    </footer>
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        new Typed('#typing-text', {
+            strings: ['Architectures.', 'Scalable Systems.', 'SaaS Solutions.', 'Backend Logic.'],
+            typeSpeed: 50, backSpeed: 30, loop: true, backDelay: 2000
+        });
+
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let particles = [];
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+            update() {
+                this.x += this.speedX; this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0; if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0; if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(16, 185, 129, 0.2)';
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
+            }
+        }
+        function init() { for (let i = 0; i < 100; i++) particles.push(new Particle()); }
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        init(); animate();
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Senior Backend Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030303;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px -20px rgba(16, 185, 129, 0.3);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-bar-inner {
+            height: 100%;
+            border-radius: 99px;
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            transition: width 1.5s ease-in-out;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #9ca3af;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #10b981;
+        }
+
+        #canvas-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas-bg"></canvas>
+
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-tighter">MOINUL<span class="accent-green">.LOGIC</span></div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Expertise</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Work</a>
+        </div>
+        <a href="#contact"
+            class="bg-white text-black px-6 py-2 rounded-full text-xs font-bold hover:bg-emerald-500 hover:text-white transition-all transform hover:scale-105">CONTACT
+            ME</a>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div data-aos="fade-down"
+            class="px-4 py-1 mb-8 border border-emerald-500/20 rounded-full bg-emerald-500/5 text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase">
+            Systems Architect & Full Stack Engineer
+        </div>
+        <h1 class="text-6xl md:text-9xl font-black mb-6 tracking-tighter leading-none">
+            Scale for <br> <span id="typing-text" class="gradient-text"></span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200"
+            class="max-w-xl text-gray-500 text-base md:text-lg mb-10 font-medium">
+            Building data-driven architectures that don't just work—they perform under the pressure of millions.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="400" class="flex space-x-4">
+            <a href="#projects"
+                class="bg-emerald-600 text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-xl shadow-emerald-600/20 hover:bg-emerald-500 transition">View
+                Systems</a>
+            <a href="#contact"
+                class="glass-card px-8 py-3.5 rounded-full font-bold text-sm hover:bg-white/5 transition">Get in
+                Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <div class="accent-green font-mono text-xs mb-4 uppercase tracking-widest">// Who am I?</div>
+                <h2 class="text-4xl font-bold mb-6 tracking-tight">Engineer with a passion for <span
+                        class="gradient-text">Complexity</span>.</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Based in Dhaka, Bangladesh, I have spent the last <b>5 years</b> architecting backend
+                    infrastructures for international SaaS platforms. My philosophy is simple: <i>Code should be clean,
+                        but architecture must be bulletproof.</i>
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    I specialize in <b>Database Sharding</b>, <b>Distributed Caching</b>, and <b>Microservices</b>. My
+                    goal is to bridge the gap between complex business logic and high-performance execution.
+                </p>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="glass-card p-4 rounded-3xl relative z-10">
+                    <img src="moinul.png" alt="Moinul"
+                        class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-500/20 blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 px-6 bg-black/30">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-center text-3xl font-bold mb-20" data-aos="fade-up">Technical <span
+                    class="accent-green">Arsenal</span></h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-up">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm font-bold">Backend (Laravel, NestJS, Node)</span>
+                        <span class="text-sm accent-green font-bold">95%</span>
+                    </div>
+                    <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-inner" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm font-bold">Databases (MySQL Sharding, Redis, Mongo)</span>
+                        <span class="text-sm accent-green font-bold">90%</span>
+                    </div>
+                    <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-inner" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm font-bold">Architecture (Microservices, Docker)</span>
+                        <span class="text-sm accent-green font-bold">85%</span>
+                    </div>
+                    <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-inner" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm font-bold">Frontend (React, Next.js, Inertia)</span>
+                        <span class="text-sm accent-green font-bold">80%</span>
+                    </div>
+                    <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                        <div class="skill-bar-inner" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-32 px-6 max-w-4xl mx-auto">
+        <h3 class="text-center text-3xl font-bold mb-20" data-aos="fade-up">Professional <span
+                class="accent-green">Journey</span></h3>
+        <div class="space-y-16">
+            <div class="relative pl-10 border-l-2 border-emerald-500/30" data-aos="fade-left">
+                <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 ring-8 ring-emerald-500/10">
+                </div>
+                <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">May 2021 — Present</span>
+                <h4 class="text-2xl font-bold mt-2">Software Engineer @ Amharc Tech</h4>
+                <p class="text-sm text-gray-500 mb-4 italic">Dublin, Ireland (Remote)</p>
+                <ul class="text-gray-400 space-y-3 text-sm">
+                    <li>• Developed microservices for Job Management, Inventory, and POS systems.</li>
+                    <li>• Integrated Stripe for automated subscription billing and multi-tenant SaaS payment flows.</li>
+                    <li>• Designed real-time inventory sync engines for dropshipping platforms (Ebaskat).</li>
+                </ul>
+            </div>
+
+            <div class="relative pl-10 border-l-2 border-white/10" data-aos="fade-left" data-aos-delay="100">
+                <div class="absolute w-4 h-4 bg-gray-800 rounded-full -left-[9px] top-1"></div>
+                <span class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">Feb 2020 — May 2021</span>
+                <h4 class="text-2xl font-bold mt-2 text-gray-400">Junior Software Engineer @ RD Network BD</h4>
+                <p class="text-sm text-gray-600 mb-4 italic">Dhaka, Bangladesh</p>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Built modular Inventory and HR Logistics systems. Focused on automating internal workflows using
+                    Laravel and AJAX-driven interfaces.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-20">
+            <h3 class="text-4xl font-black">Featured <span class="accent-green">Lab.</span></h3>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="text-xs font-bold border-b border-emerald-500 pb-1 hover:text-emerald-500 transition">SEE ALL
+                GITHUB</a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass-card p-8 rounded-[2.5rem]" data-aos="fade-up">
+                <div
+                    class="h-40 bg-emerald-950/10 rounded-2xl mb-6 flex items-center justify-center font-mono text-emerald-500/20 text-4xl">
+                    1B+</div>
+                <h4 class="text-2xl font-bold mb-3">OmniShard-1B</h4>
+                <p class="text-gray-500 text-sm mb-6">Database sharding logic capable of handling 1 billion records with
+                    optimized lookup speeds.</p>
+                <div class="flex space-x-3">
+                    <span class="text-[10px] font-bold py-1 px-3 bg-white/5 rounded-full">MySQL</span>
+                    <span class="text-[10px] font-bold py-1 px-3 bg-white/5 rounded-full">Redis</span>
+                </div>
+            </div>
+            <div class="glass-card p-8 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="h-40 bg-blue-950/10 rounded-2xl mb-6 flex items-center justify-center font-mono text-blue-500/20 text-4xl">
+                    SaaS</div>
+                <h4 class="text-2xl font-bold mb-3">AT SMS SaaS</h4>
+                <p class="text-gray-500 text-sm mb-6">Multi-tenant service management system with real-time rota and job
+                    tracking.</p>
+                <div class="flex space-x-3">
+                    <span class="text-[10px] font-bold py-1 px-3 bg-white/5 rounded-full">NestJS</span>
+                    <span class="text-[10px] font-bold py-1 px-3 bg-white/5 rounded-full">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 max-w-xl mx-auto text-center">
+        <h3 class="text-4xl font-bold mb-6">Ready to <span class="gradient-text">Start?</span></h3>
+        <p class="text-gray-500 mb-12">I'm currently open to freelance opportunities and full-stack collaborations.</p>
+
+        <form action="https://formspree.io/f/xyzjgkgk" method="POST"
+            class="glass-card p-10 rounded-[3rem] text-left space-y-6">
+            <input type="text" name="name" placeholder="Name" required
+                class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-emerald-500 transition">
+            <input type="email" name="email" placeholder="Email" required
+                class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-emerald-500 transition">
+            <textarea name="message" placeholder="Project details..." rows="4" required
+                class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl focus:outline-none focus:border-emerald-500 transition"></textarea>
+            <button type="submit"
+                class="w-full bg-emerald-600 py-4 rounded-2xl font-bold hover:bg-emerald-500 shadow-xl shadow-emerald-600/20 transition-all">SEND
+                MESSAGE</button>
+        </form>
+    </section>
+
+    <footer
+        class="py-12 border-t border-white/5 text-center text-[10px] font-bold text-gray-700 tracking-[0.5em] uppercase">
+        Designed & Built by Md. Moinul Islam &copy; 2026
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        new Typed('#typing-text', {
+            strings: ['Millions.', 'Billion Records.', 'Global SaaS.', 'Performance.'],
+            typeSpeed: 50, backSpeed: 30, loop: true, backDelay: 2000, cursorChar: '_'
+        });
+
+        // Particle Background Logic
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let particles = [];
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(16, 185, 129, 0.15)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        function init() { for (let i = 0; i < 80; i++) particles.push(new Particle()); }
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        init(); animate();
+        window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+    </script>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Backend Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #e5e7eb;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.2);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #10b981;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .typed-cursor {
+            color: #10b981;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/70 backdrop-blur-lg px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">MOINUL<span class="accent-green">.ISLAM</span></div>
+        <div class="hidden md:flex space-x-10 text-sm font-medium">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+        </div>
+        <a href="mailto:moinulibr@gmail.com"
+            class="bg-emerald-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-emerald-500 hover:scale-105 transition duration-300 shadow-lg shadow-emerald-600/20">Hire
+            Me</a>
+    </nav>
+
+    <section id="home"
+        class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative overflow-hidden">
+        <div data-aos="fade-down"
+            class="inline-block px-4 py-1.5 mb-6 border border-emerald-500/30 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono tracking-widest uppercase">
+            Backend Scaling Expert
+        </div>
+        <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
+            Architecting <span class="gradient-text">Systems</span> <br>
+            for <span id="typing-text" class="accent-green font-mono"></span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200"
+            class="max-w-2xl text-gray-400 text-lg md:text-xl mb-12 leading-relaxed">
+            I'm Md. Moinul Islam, a Software Engineer from Dhaka. I build horizontally scalable architectures,
+            distributed systems, and robust microservices that handle massive traffic.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="400"
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <a href="#projects"
+                class="bg-emerald-600 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg shadow-emerald-600/30">Explore
+                Projects</a>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="glass-card px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">GitHub Profile</a>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="zoom-in">
+            <div class="glass-card p-8 rounded-[2rem] text-center">
+                <div class="text-4xl font-bold accent-green mb-1 counter" data-target="1">1B+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Records Managed</div>
+            </div>
+            <div class="glass-card p-8 rounded-[2rem] text-center">
+                <div class="text-4xl font-bold accent-green mb-1">90%</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Auth Optimization</div>
+            </div>
+            <div class="glass-card p-8 rounded-[2rem] text-center">
+                <div class="text-4xl font-bold accent-green mb-1">5+ Yrs</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Experience</div>
+            </div>
+            <div class="glass-card p-8 rounded-[2rem] text-center">
+                <div class="text-4xl font-bold accent-green mb-1">10+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">SaaS Apps Built</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Technical <span
+                class="accent-green">Arsenal</span></h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-emerald-400 font-bold mb-6 flex items-center">Backend & Core</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li>PHP (Laravel, Lumen)</li>
+                    <li>Node.js (NestJS, Express)</li>
+                    <li>MySQL (Sharding & Replication)</li>
+                    <li>Redis (Caching & Queues)</li>
+                </ul>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="text-blue-400 font-bold mb-6 flex items-center">Architecture & Cloud</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li>Microservices Architecture</li>
+                    <li>Docker & Containerization</li>
+                    <li>RabbitMQ Messaging</li>
+                    <li>RESTful & GraphQL APIs</li>
+                </ul>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="text-orange-400 font-bold mb-6 flex items-center">Frontend & Tools</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li>React.js & Next.js</li>
+                    <li>Inertia.js & Tailwind CSS</li>
+                    <li>Stripe & Payment Gateways</li>
+                    <li>Git & DevOps Workflows</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16" data-aos="fade-right">Featured <span class="accent-green">Projects</span>
+        </h3>
+
+        <div class="glass-card p-8 md:p-12 rounded-[40px] mb-12 flex flex-col md:flex-row gap-12 items-center"
+            data-aos="fade-up">
+            <div class="md:w-1/2">
+                <div class="text-emerald-500 font-mono text-xs mb-4 uppercase">High-Scale R&D</div>
+                <h4 class="text-4xl font-bold mb-6">OmniShard-1B</h4>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Designed a horizontally scalable system to manage <b>1 Billion+</b> user records with <b>sub-second
+                        latency</b>.
+                    Built a custom 16-digit K-Ordered Sequential ID Generator and intelligent Metadata routing.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded text-xs">MySQL Sharding</span>
+                    <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded text-xs">Redis Cluster</span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-xs">RabbitMQ</span>
+                </div>
+                <a href="https://github.com/moinulibr/omnishard-1b" target="_blank"
+                    class="font-bold accent-green hover:underline flex items-center group">
+                    Explore Architecture <span class="ml-2 group-hover:translate-x-2 transition">→</span>
+                </a>
+            </div>
+            <div
+                class="md:w-1/2 h-80 w-full bg-emerald-950/10 rounded-[2rem] border border-emerald-500/10 flex items-center justify-center text-emerald-500/50 font-mono text-sm italic overflow-hidden">
+                <div class="animate-pulse">_DATABASE_SHARDING_MODEL_V1</div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up">
+                <h4 class="text-2xl font-bold mb-4">AT SMS-Servicing SaaS</h4>
+                <p class="text-gray-400 mb-6 text-sm">Lead backend developer for a microservice-based service management
+                    system. Managed job lifecycles and automated billing for Dublin-based clients.</p>
+                <div class="text-[10px] font-bold text-emerald-500/70 uppercase">NestJS • Laravel • Stripe</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-2xl font-bold mb-4">Ebaskat Automation</h4>
+                <p class="text-gray-400 mb-6 text-sm">Built a real-time Data Sync Service for AliExpress and BigBuy
+                    dropshipping integration. Handled high-volume inventory updates using Redis queues.</p>
+                <div class="text-[10px] font-bold text-emerald-500/70 uppercase">Lumen • Queues • API Automation</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up">
+                <h4 class="text-2xl font-bold mb-4">Billing & Subscriptions</h4>
+                <p class="text-gray-400 mb-6 text-sm">Built automated subscription billing with Stripe, recurring
+                    payments, and perfect webhook synchronization with Inertia.js + React dashboard.</p>
+                <div class="text-[10px] font-bold text-emerald-500/70 uppercase">React • Inertia • Stripe Webhooks</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-2xl font-bold mb-4">AT POS Solution</h4>
+                <p class="text-gray-400 mb-6 text-sm">Developed a smart retail Point of Sale system with multi-branch
+                    inventory tracking, analytics, and thermal printer integration.</p>
+                <div class="text-[10px] font-bold text-emerald-500/70 uppercase">Node.js • Next.js • MySQL</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">Work <span
+                class="accent-green">Timeline</span></h3>
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l-2 border-emerald-500/30" data-aos="fade-left">
+                <div
+                    class="absolute w-5 h-5 bg-emerald-500 rounded-full -left-[11px] top-1 shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                </div>
+                <h4 class="text-xl font-bold">Software Engineer @ Amharc Tech</h4>
+                <div class="text-emerald-500 text-sm font-mono mb-4 uppercase tracking-tighter">May 2021 — Present</div>
+                <p class="text-gray-400 text-sm">Architecting backend microservices and automation engines. Specializing
+                    in SaaS scalability and external service integrations.</p>
+            </div>
+            <div class="relative pl-8 border-l-2 border-white/10" data-aos="fade-left" data-aos-delay="100">
+                <div class="absolute w-5 h-5 bg-gray-800 rounded-full -left-[11px] top-1"></div>
+                <h4 class="text-xl font-bold text-gray-400">Junior Software Engineer @ RD Network BD</h4>
+                <div class="text-gray-600 text-sm font-mono mb-4 uppercase tracking-tighter">Feb 2020 — May 2021</div>
+                <p class="text-gray-500 text-sm">Developed modular systems for Inventory POS, Courier Management, and HR
+                    Logistics using Laravel/MySQL.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 text-center border-t border-white/5 mt-10 relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-emerald-500/10 blur-[100px]"></div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-10 tracking-tighter">Let's build the <span
+                class="accent-green">Next Big Thing.</span></h2>
+        <a href="mailto:moinulibr@gmail.com"
+            class="text-2xl md:text-4xl font-bold underline decoration-emerald-500 decoration-4 underline-offset-8 hover:text-emerald-400 transition duration-300">moinulibr@gmail.com</a>
+
+        <div class="flex justify-center space-x-10 mt-20">
+            <a href="https://linkedin.com/in/moinulibr" target="_blank"
+                class="text-gray-500 hover:text-white transition">LinkedIn</a>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="text-gray-500 hover:text-white transition">GitHub</a>
+            <a href="https://moinulibr.github.io/my-portfolio"
+                class="text-gray-500 hover:text-white transition">Portfolio</a>
+        </div>
+        <p class="text-gray-700 text-[10px] mt-16 tracking-[0.3em] uppercase">Hand-coded by Moinul • 2026</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-back' });
+
+        // Initialize Typed.js for Dynamic Header
+        new Typed('#typing-text', {
+            strings: [
+                'a Billion Users.',
+                'Extreme Scalability.',
+                'Sub-second Latency.',
+                'Global Performance.',
+                'Massive Data Sets.'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+            backDelay: 2000,
+            cursorChar: '_'
+        });
+
+        // Smooth Hover Effect for Stats
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Backend Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #e5e7eb;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Typing Cursor Style */
+        .typed-cursor {
+            color: #10b981;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-md px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">MOINUL<span class="accent-green">.ISLAM</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#home" class="hover:text-emerald-500 transition">Home</a>
+            <a href="#projects" class="hover:text-emerald-500 transition">Projects</a>
+            <a href="#experience" class="hover:text-emerald-500 transition">Experience</a>
+        </div>
+        <a href="mailto:moinulibr@gmail.com"
+            class="bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-emerald-500 transition">Hire
+            Me</a>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div data-aos="fade-down"
+            class="inline-block px-4 py-1.5 mb-6 border border-emerald-500/30 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono tracking-widest uppercase">
+            Backend Scaling Expert
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter min-h-[160px] md:min-h-[auto]">
+            Architecting <span class="gradient-text">Systems</span> <br>
+            for <span id="typing-text" class="accent-green"></span>
+        </h1>
+
+        <p data-aos="fade-up" data-aos-delay="200"
+            class="max-w-2xl text-gray-400 text-lg md:text-xl mb-12 leading-relaxed">
+            Md. Moinul Islam — Software Engineer based in Dhaka. I build horizontally scalable architectures, robust
+            microservices, and high-performance APIs.
+        </p>
+
+        <div data-aos="fade-up" data-aos-delay="300"
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <a href="#projects"
+                class="bg-emerald-600 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg shadow-emerald-600/20">Explore
+                Projects</a>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="glass-card px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">GitHub Profile</a>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="glass-card p-8 md:p-12 rounded-[40px] mb-12 flex flex-col md:flex-row gap-12 items-center"
+            data-aos="fade-up">
+            <div class="md:w-1/2">
+                <div class="text-emerald-500 font-mono text-xs mb-4 uppercase">Featured Project</div>
+                <h4 class="text-4xl font-bold mb-6">OmniShard-1B</h4>
+                <p class="text-gray-400 mb-8">
+                    Managed 1 Billion+ records with sub-second latency. Implemented custom MySQL sharding and an
+                    intelligent Metadata Hub.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span
+                        class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded text-xs border border-emerald-500/20">MySQL
+                        Sharding</span>
+                    <span
+                        class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded text-xs border border-blue-500/20">Redis</span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-xs">Docker</span>
+                </div>
+                <a href="https://github.com/moinulibr/omnishard-1b" target="_blank"
+                    class="font-bold accent-green hover:underline">View on GitHub →</a>
+            </div>
+            <div
+                class="md:w-1/2 h-64 w-full bg-emerald-950/20 rounded-3xl border border-emerald-500/10 flex items-center justify-center text-emerald-500 font-mono text-xs">
+                // Sharding Architecture Visualized
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        // Initialize AOS (Scroll Animations)
+        AOS.init({ duration: 1000, once: true });
+
+        // Initialize Typed.js (Typing Animation)
+        var typed = new Typed('#typing-text', {
+            strings: [
+                'a Billion Users.',
+                'Extreme Scale.',
+                'Sub-second Latency.',
+                'Robust Microservices.',
+                'High Performance.'
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true,
+            backDelay: 2000,
+            cursorChar: '|'
+        });
+    </script>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Backend Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #e5e7eb;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link:hover {
+            color: #10b981;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-md px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">MOINUL<span class="accent-green">.ISLAM</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#home" class="nav-link transition">Home</a>
+            <a href="#skills" class="nav-link transition">Skills</a>
+            <a href="#projects" class="nav-link transition">Projects</a>
+            <a href="#experience" class="nav-link transition">Experience</a>
+        </div>
+        <a href="mailto:moinulibr@gmail.com"
+            class="bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-emerald-500 transition">Hire
+            Me</a>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div data-aos="fade-up"
+            class="inline-block px-4 py-1.5 mb-6 border border-emerald-500/30 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono tracking-widest uppercase">
+            Specializing in high-scale backend
+        </div>
+        <h1 data-aos="fade-up" data-aos-delay="100"
+            class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
+            Architecting <span class="gradient-text">Systems</span> <br> for a Billion Users.
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200"
+            class="max-w-2xl text-gray-400 text-lg md:text-xl mb-12 leading-relaxed">
+            Md. Moinul Islam — Software Engineer based in Dhaka. I build horizontally scalable architectures, robust
+            microservices, and high-performance APIs.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="300"
+            class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <a href="#projects"
+                class="bg-emerald-600 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg shadow-emerald-600/20">Explore
+                Projects</a>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="glass-card px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">GitHub Profile</a>
+        </div>
+    </section>
+
+    <section class="py-10 px-6 max-w-6xl mx-auto" data-aos="zoom-in">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">1B+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Records Managed</div>
+            </div>
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">90%</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">DB Optimization</div>
+            </div>
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">5+ Yrs</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Experience</div>
+            </div>
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">15+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Projects Delivered</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16" data-aos="fade-right">Selected <span class="accent-green">Work</span></h3>
+
+        <div class="glass-card p-8 md:p-12 rounded-[40px] mb-12 flex flex-col md:flex-row gap-12 items-center"
+            data-aos="fade-up">
+            <div class="md:w-1/2">
+                <div class="text-emerald-500 font-mono text-xs mb-4 uppercase">Featured R&D Project</div>
+                <h4 class="text-4xl font-bold mb-6">OmniShard-1B</h4>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Designed a horizontally scalable system to manage <b>1 Billion+</b> user records with <b>sub-second
+                        latency</b>. Implemented custom MySQL sharding and an intelligent Metadata Hub for traffic
+                    routing.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span
+                        class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded text-xs border border-emerald-500/20">MySQL
+                        Sharding</span>
+                    <span
+                        class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded text-xs border border-blue-500/20">Redis</span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-xs">Docker</span>
+                </div>
+                <a href="https://github.com/moinulibr/omnishard-1b" target="_blank"
+                    class="font-bold accent-green hover:underline flex items-center group">
+                    View Architecture on GitHub <span class="ml-2 group-hover:translate-x-1 transition">→</span>
+                </a>
+            </div>
+            <div
+                class="md:w-1/2 h-80 w-full bg-emerald-950/20 rounded-3xl border border-emerald-500/10 flex items-center justify-center text-emerald-500 font-mono text-sm italic">
+                // System Architecture Visualized
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up">
+                <h4 class="text-2xl font-bold mb-4">AT SMS-Servicing SaaS</h4>
+                <p class="text-gray-400 mb-6 text-sm">Engineered core microservices for a large-scale Service Management
+                    System. Integrated Stripe, Mailgun, and real-time Pusher notifications.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">NestJS</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Laravel</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Stripe</span>
+                </div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-2xl font-bold mb-4">Ebaskat Automation</h4>
+                <p class="text-gray-400 mb-6 text-sm">Built a high-performance Data Sync Service for AliExpress/BigBuy
+                    dropshipping integration, handling real-time inventory and pricing updates.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Lumen</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Redis Queues</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">API Integration</span>
+                </div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up">
+                <h4 class="text-2xl font-bold mb-4">Billing & Subscription Hub</h4>
+                <p class="text-gray-400 mb-6 text-sm">Automated billing cycles and recurring payment systems with
+                    perfect webhook synchronization and a React SPA interface.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Inertia.js</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">React</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">MySQL</span>
+                </div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-2xl font-bold mb-4">Modular Retail POS</h4>
+                <p class="text-gray-400 mb-6 text-sm">A smart retail solution with inventory management, barcode
+                    scanning, and multi-branch real-time analytics.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Node.js</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">Next.js</span>
+                    <span class="text-[10px] font-bold text-emerald-500 uppercase">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center" data-aos="fade-down">Work <span
+                class="accent-green">History</span></h3>
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l border-emerald-500/30" data-aos="fade-left">
+                <div
+                    class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-2 top-1 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+                </div>
+                <h4 class="text-xl font-bold">Software Engineer @ Amharc Tech</h4>
+                <div class="text-emerald-500 text-sm font-mono mb-4 italic uppercase tracking-tighter">MAY 2021 —
+                    PRESENT</div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Lead developer for backend architecture. Managed microservices for SaaS platforms, integrated
+                    automated billing, and built complex data synchronization engines.
+                </p>
+            </div>
+            <div class="relative pl-8 border-l border-gray-800" data-aos="fade-left">
+                <div class="absolute w-4 h-4 bg-gray-700 rounded-full -left-2 top-1"></div>
+                <h4 class="text-xl font-bold text-gray-400">Junior Software Engineer @ RD Network BD</h4>
+                <div class="text-gray-600 text-sm font-mono mb-4 italic uppercase tracking-tighter">FEB 2020 — MAY 2021
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Developed modular business systems including Inventory Management, Logistics, and HR tools using
+                    Laravel and MySQL.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 mt-10">
+        <h2 class="text-3xl font-bold mb-8 tracking-tighter">Ready to build something <span
+                class="accent-green">massive?</span></h2>
+        <a href="mailto:moinulibr@gmail.com"
+            class="text-2xl md:text-4xl font-bold underline decoration-emerald-500 decoration-4 underline-offset-8 hover:text-emerald-400 transition">moinulibr@gmail.com</a>
+
+        <div class="flex justify-center space-x-8 mt-16">
+            <a href="https://linkedin.com/in/moinulibr" target="_blank"
+                class="text-gray-500 hover:text-white transition">LinkedIn</a>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="text-gray-500 hover:text-white transition">GitHub</a>
+        </div>
+        <p class="text-gray-700 text-[10px] mt-12 tracking-widest uppercase">Hand-coded with Precision & Performance</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Backend Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #e5e7eb;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #10b981;
+            transform: translateY(-5px);
+        }
+
+        .accent-green {
+            color: #10b981;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link:hover {
+            color: #10b981;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav
+        class="fixed w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-md px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">MOINUL<span class="accent-green">.ISLAM</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+        </div>
+        <a href="mailto:moinulibr@gmail.com"
+            class="bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-emerald-500 transition">Hire
+            Me</a>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div
+            class="inline-block px-4 py-1.5 mb-6 border border-emerald-500/30 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono tracking-widest uppercase">
+            Available for high-scale challenges
+        </div>
+        <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
+            Architecting <span class="gradient-text">Systems</span> <br> for a Billion Users.
+        </h1>
+        <p class="max-w-2xl text-gray-400 text-lg md:text-xl mb-12 leading-relaxed">
+            Md. Moinul Islam — A Backend Specialist based in Dhaka. I build horizontally scalable architectures, robust
+            microservices, and high-performance APIs.
+        </p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <a href="#projects"
+                class="bg-emerald-600 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg shadow-emerald-600/20">Explore
+                Projects</a>
+            <a href="https://github.com/moinulibr" target="_blank"
+                class="glass-card px-10 py-4 rounded-full font-bold hover:bg-white/5 transition">GitHub Profile</a>
+        </div>
+    </section>
+
+    <section class="py-10 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">1B+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Records Managed</div>
+            </div>
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">90%</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">DB Optimization</div>
+            </div>
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">5+ Yrs</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Experience</div>
+            </div>
+            <div class="glass-card p-6 rounded-3xl text-center">
+                <div class="text-3xl font-bold accent-green mb-1">15+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest">Project Done</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center">Technical <span class="accent-green">Arsenal</span></h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl">
+                <h4 class="text-emerald-400 font-bold mb-6 flex items-center">
+                    <span class="mr-2">⚡</span> Languages & Frameworks
+                </h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li>PHP (Laravel, Lumen)</li>
+                    <li>Node.js (NestJS, Express)</li>
+                    <li>React.js & Next.js</li>
+                    <li>Vanilla Javascript</li>
+                </ul>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h4 class="text-blue-400 font-bold mb-6 flex items-center">
+                    <span class="mr-2">💾</span> Database & Scaling
+                </h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li>MySQL (Sharding, Partitioning)</li>
+                    <li>Redis (Caching, Bloom Filter)</li>
+                    <li>PostgreSQL & MongoDB</li>
+                    <li>Database Replication</li>
+                </ul>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h4 class="text-orange-400 font-bold mb-6 flex items-center">
+                    <span class="mr-2">🛠</span> Architecture & Tools
+                </h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li>Microservices & SaaS</li>
+                    <li>Docker & WSL2</li>
+                    <li>RabbitMQ & Redis Queues</li>
+                    <li>Stripe & RESTful APIs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16">Selected <span class="accent-green">Projects</span></h3>
+
+        <div class="glass-card p-8 md:p-12 rounded-[40px] mb-12 flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <div class="text-emerald-500 font-mono text-xs mb-4 uppercase">Featured R&D Project</div>
+                <h4 class="text-4xl font-bold mb-6">OmniShard-1B</h4>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Designed a horizontally scalable system to manage <b>1 Billion+</b> user records with <b>sub-second
+                        latency</b>. Implemented custom MySQL sharding and an intelligent Metadata Hub for traffic
+                    routing.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span
+                        class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded text-xs border border-emerald-500/20">MySQL
+                        Sharding</span>
+                    <span
+                        class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded text-xs border border-blue-500/20">Redis</span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-xs">Docker</span>
+                </div>
+                <a href="https://github.com/moinulibr" class="font-bold accent-green hover:underline flex items-center">
+                    View Architecture on GitHub <span class="ml-2">→</span>
+                </a>
+            </div>
+            <div
+                class="md:w-1/2 h-80 w-full bg-emerald-950/20 rounded-3xl border border-emerald-500/10 flex items-center justify-center text-emerald-500 font-mono text-sm italic">
+                // System Architecture Visualized
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-3xl">
+                <h4 class="text-2xl font-bold mb-4">AT POS Solution</h4>
+                <p class="text-gray-400 mb-6 text-sm">Smart Retail POS with microservices architecture, batch tracking,
+                    and real-time sales analytics.</p>
+                <div class="text-xs font-bold text-gray-500 uppercase mb-4">NestJS • Next.js • Laravel</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h4 class="text-2xl font-bold mb-4">Ebaskat Automation</h4>
+                <p class="text-gray-400 mb-6 text-sm">Lead Developer of a custom Data Sync Service for AliExpress/BigBuy
+                    real-time dropshipping updates.</p>
+                <div class="text-xs font-bold text-gray-500 uppercase mb-4">PHP • Laravel Lumen • Queues</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center">Work <span class="accent-green">Timeline</span></h3>
+        <div class="space-y-12">
+            <div class="relative pl-8 border-l border-emerald-500/30">
+                <div
+                    class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-2 top-1 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+                </div>
+                <h4 class="text-xl font-bold">Software Engineer @ Amharc Tech</h4>
+                <div class="text-emerald-500 text-sm font-mono mb-4">MAY 2021 — PRESENT (DUBLIN, REMOTE)</div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Lead architect for high-traffic SaaS modules. Spearheaded the development of Microservices, API
+                    Integrations (Stripe, Twilio), and the entire Ebaskat backend system.
+                </p>
+            </div>
+            <div class="relative pl-8 border-l border-gray-800">
+                <div class="absolute w-4 h-4 bg-gray-700 rounded-full -left-2 top-1"></div>
+                <h4 class="text-xl font-bold text-gray-400">Junior Software Engineer @ RD Network BD</h4>
+                <div class="text-gray-600 text-sm font-mono mb-4">FEB 2020 — MAY 2021</div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Developed modular business systems for Inventory and Logistics. Built dynamic vehicle tracking and
+                    HR management systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 mt-10">
+        <h2 class="text-3xl font-bold mb-8 tracking-tighter">Ready to scale your next <span class="accent-green">big
+                idea?</span></h2>
+        <a href="mailto:moinulibr@gmail.com"
+            class="text-2xl md:text-4xl font-bold underline decoration-emerald-500 decoration-4 underline-offset-8 hover:text-emerald-400 transition">moinulibr@gmail.com</a>
+
+        <div class="flex justify-center space-x-8 mt-16">
+            <a href="https://linkedin.com/in/moinulibr" class="text-gray-500 hover:text-white transition">LinkedIn</a>
+            <a href="https://github.com/moinulibr" class="text-gray-500 hover:text-white transition">GitHub</a>
+            <a href="https://moinulibr.github.io/my-portfolio"
+                class="text-gray-500 hover:text-white transition">Portfolio</a>
+        </div>
+        <p class="text-gray-700 text-xs mt-12 italic">Hand-coded with ❤️ and Scaling Logic.</p>
+    </footer>
+
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moinul Islam | Backend Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ededed; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .accent-text { color: #10b981; } /* Emerald Green Accent */
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #000000 100%); }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center glass-card">
+        <div class="text-xl font-bold tracking-tighter">MOINUL<span class="accent-text">.ISLAM</span></div>
+        <div class="space-x-8 text-sm font-medium">
+            <a href="#about" class="hover:accent-text transition">About</a>
+            <a href="#projects" class="hover:accent-text transition">Projects</a>
+            <a href="#experience" class="hover:accent-text transition">Experience</a>
+            <a href="mailto:moinulibr@gmail.com" class="bg-emerald-600 px-4 py-2 rounded-full hover:bg-emerald-500 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h2 class="text-emerald-500 font-mono mb-4">Software Engineer & Backend Architect</h2>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Architecting Scalable <br> <span class="accent-text">Backends for Billions.</span></h1>
+        <p class="max-w-2xl text-gray-400 text-lg mb-10">
+            Specializing in high-performance database sharding, microservices, and robust full-stack solutions with Laravel & NestJS.
+        </p>
+        <div class="flex space-x-4">
+            <a href="#projects" class="border border-emerald-500 px-8 py-3 rounded-full hover:bg-emerald-500 hover:text-black transition font-semibold">View Projects</a>
+            <a href="[Your_CV_Link]" class="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-200 transition font-semibold">Download CV</a>
+        </div>
+    </section>
+
+    <section class="py-20 px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-bold accent-text mb-2">1B+</div>
+                <div class="text-gray-500 text-sm">Records Managed</div>
+            </div>
+            <div class="text-center glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-bold accent-text mb-2">90%</div>
+                <div class="text-gray-500 text-sm">DB Overhead Reduction</div>
+            </div>
+            <div class="text-center glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-bold accent-text mb-2">5+</div>
+                <div class="text-gray-500 text-sm">Years Experience</div>
+            </div>
+            <div class="text-center glass-card p-8 rounded-2xl">
+                <div class="text-4xl font-bold accent-text mb-2">10+</div>
+                <div class="text-gray-500 text-sm">Enterprise Apps</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-8 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-12">Featured <span class="accent-text">R&D Project</span></h3>
+        <div class="glass-card p-10 rounded-3xl grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h4 class="text-2xl font-bold mb-4">OmniShard-1B</h4>
+                <p class="text-gray-400 mb-6">
+                    A horizontally scalable system designed to manage 1 Billion+ user records with sub-second query latency. Implemented custom MySQL sharding, intelligent metadata routing, and K-Ordered Sequential IDs.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="bg-emerald-900 text-emerald-300 px-3 py-1 rounded-md text-xs">MySQL Sharding</span>
+                    <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-md text-xs">Redis</span>
+                    <span class="bg-orange-900 text-orange-300 px-3 py-1 rounded-md text-xs">RabbitMQ</span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-md text-xs">Docker</span>
+                </div>
+                <a href="#" class="accent-text font-bold hover:underline">View Case Study &rarr;</a>
+            </div>
+            <div class="bg-emerald-900/20 h-64 rounded-2xl border border-emerald-500/20 flex items-center justify-center">
+                <span class="text-emerald-500 font-mono">[ Architecture Diagram ]</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-gray-900">
+        <p class="text-gray-500 mb-4">Ready to build something massive?</p>
+        <a href="mailto:moinulibr@gmail.com" class="text-2xl font-bold hover:accent-text transition">moinulibr@gmail.com</a>
+        <div class="mt-10 space-x-6">
+            <a href="https://linkedin.com/in/moinulibr" class="text-gray-400 hover:text-white">LinkedIn</a>
+            <a href="https://github.com/moinulibr" class="text-gray-400 hover:text-white">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html> -->
