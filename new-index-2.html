@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Moinul Islam | Senior Software Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body class="text-gray-300 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-indigo-500 z-50 transition-all duration-100" style="width: 0%"></div>
+
+    <!-- Background Orbs (Premium Aesthetic) -->
+    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-900/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-emerald-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-gray-950/80 backdrop-blur-md border-b border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="code-font text-xl font-bold tracking-wider text-white flex items-center gap-2">
+                <span class="text-indigo-400">&lt;</span>MOINUL<span class="text-indigo-400"> /&gt;</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="#about" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><span class="text-indigo-400 code-font text-xs">01.</span> About</a>
+                <a href="#toolkit" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><span class="text-indigo-400 code-font text-xs">02.</span> Toolkit</a>
+                <a href="#experience" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><span class="text-indigo-400 code-font text-xs">03.</span> Experience</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><span class="text-indigo-400 code-font text-xs">04.</span> Projects</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><span class="text-indigo-400 code-font text-xs">05.</span> Contact</a>
+                <a href="#contact" class="px-4 py-2 border border-indigo-500/30 hover:border-indigo-500 hover:bg-indigo-500/10 text-indigo-400 rounded-md transition-all code-font text-xs tracking-normal">Hire Me</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-white" id="menu-btn">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-950 z-40 flex flex-col items-center justify-center gap-8 hidden opacity-0 transition-all duration-300">
+        <button class="absolute top-7 right-6 text-white" id="close-btn">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <a href="#about" class="text-xl hover:text-indigo-400 transition-colors mobile-link">About</a>
+        <a href="#toolkit" class="text-xl hover:text-indigo-400 transition-colors mobile-link">Toolkit</a>
+        <a href="#experience" class="text-xl hover:text-indigo-400 transition-colors mobile-link">Experience</a>
+        <a href="#projects" class="text-xl hover:text-indigo-400 transition-colors mobile-link">Projects</a>
+        <a href="#contact" class="text-xl hover:text-indigo-400 transition-colors mobile-link">Contact</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 relative z-10 pt-20">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center justify-between gap-12 py-12">
+            <div class="flex-1 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-full text-xs font-medium code-font">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span> Open for Remote Opportunities
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-none">
+                    Crafting High-Performance <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-emerald-400">Distributed Systems</span> & Automation
+                </h1>
+                <p class="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
+                    Senior Software Engineer with 4.5+ years of expertise in building scalable backend architectures, high-concurrency data layers, and AI-driven workflow automations.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#projects" class="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg shadow-lg shadow-indigo-600/20 transition-all text-center flex items-center justify-center gap-2">
+                        View My Work <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-full sm:w-auto px-6 py-3 border border-gray-800 hover:border-gray-700 hover:bg-gray-900 text-gray-300 font-medium rounded-lg transition-all text-center flex items-center justify-center gap-2">
+                        Download Resume <i data-lucide="download" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interactive Terminal Component -->
+            <div class="flex-1 w-full max-w-lg lg:max-w-none">
+                <div class="w-full bg-gray-950 border border-gray-800 rounded-xl overflow-hidden shadow-2xl shadow-black/50">
+                    <div class="bg-gray-900 px-4 py-3 flex items-center justify-between border-b border-gray-800">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
+                        </div>
+                        <span class="text-xs text-gray-500 code-font">moinul@architecture-node:~</span>
+                        <i data-lucide="terminal" class="w-4 h-4 text-gray-600"></i>
+                    </div>
+                    <div class="p-6 code-font text-xs sm:text-sm space-y-4 text-gray-400 overflow-x-auto">
+                        <div>
+                            <span class="text-emerald-400">~$</span> <span class="text-white">curl -s https://api.moinul.dev/profile</span>
+                        </div>
+                        <div class="pl-4 text-gray-500">
+                            {
+                            <div class="pl-4"><span class="text-indigo-400">"name"</span>: <span class="text-amber-300">"Md Moinul Islam"</span>,</div>
+                            <div class="pl-4"><span class="text-indigo-400">"role"</span>: <span class="text-amber-300">"Senior Software Engineer"</span>,</div>
+                            <div class="pl-4"><span class="text-indigo-400">"experience"</span>: <span class="text-amber-300">"4.5+ Years (Global/Remote)"</span>,</div>
+                            <div class="pl-4"><span class="text-indigo-400">"focus"</span>: [<span class="text-emerald-400">"Distributed_DB"</span>, <span class="text-emerald-400">"High_Concurrency"</span>, <span class="text-emerald-400">"AI_Agents"</span>]</div>
+                            }
+                        </div>
+                        <div class="pt-2">
+                            <span class="text-emerald-400">~$</span> <span class="text-white">docker-compose up -d omnishard-cluster</span>
+                        </div>
+                        <div class="text-gray-500 pl-4 animate-pulse text-indigo-400">
+                            [+] Running 3/3 <br>
+                            ✔ Container redis-master  Healthy <br>
+                            ✔ Container shard-node-01 Healthy <br>
+                            ✔ Container laravel-api   Running
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-900 my-12">
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 space-y-8">
+            <div class="flex items-center gap-4">
+                <span class="text-indigo-400 code-font text-sm">01.</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">About My Craft</h2>
+                <div class="h-[1px] bg-gray-800 flex-1"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2 space-y-6 text-gray-400 text-base sm:text-lg leading-relaxed">
+                    <p>
+                        I am a Senior Software Engineer dedicated to solving complex architectural challenges and building software that scales seamlessly. Over the past 4.5 years working with international teams, I have specialized in turning heavy data loads into highly optimized, concurrent, and fault-tolerant systems.
+                    </p>
+                    <p>
+                        Beyond traditional backend engineering, I bridge the gap between heavy infrastructure and future-proof tech by architecting custom distributed databases, optimizing caching clusters, and building intelligent AI Automation systems that eliminate operational bottlenecks.
+                    </p>
+                    
+                    <!-- Quick Impact Metric Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 text-center">
+                        <div class="p-4 bg-gray-950 border border-gray-900 rounded-xl">
+                            <div class="text-2xl sm:text-3xl font-bold text-white code-font">4.5+</div>
+                            <div class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Years Exp</div>
+                        </div>
+                        <div class="p-4 bg-gray-950 border border-gray-900 rounded-xl">
+                            <div class="text-2xl sm:text-3xl font-bold text-indigo-400 code-font">99.9%</div>
+                            <div class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Uptime Focus</div>
+                        </div>
+                        <div class="p-4 bg-gray-950 border border-gray-900 rounded-xl">
+                            <div class="text-2xl sm:text-3xl font-bold text-emerald-400 code-font">10k+</div>
+                            <div class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Data Ops/s</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Headshot / Typography Logo placeholder -->
+                <div class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-indigo-500 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 opacity-20"></div>
+                        <!-- NOTE: Replace the src below with your actual professional headshot image -->
+                        <div class="w-64 h-64 sm:w-72 sm:h-72 bg-gray-900 border-2 border-gray-800 rounded-2xl overflow-hidden relative z-10 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500" alt="Md Moinul Islam" class="w-full h-full object-cover grayscale contrast-125 mix-blend-luminosity hover:grayscale-0 transition-all duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-900 my-12">
+
+        <!-- Core Toolkit / Bento Grid Layout -->
+        <section id="toolkit" class="py-16 space-y-8">
+            <div class="flex items-center gap-4">
+                <span class="text-indigo-400 code-font text-sm">02.</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Architectural Toolkit</h2>
+                <div class="h-[1px] bg-gray-800 flex-1"></div>
+            </div>
+
+            <!-- Premium Bento Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Card 1: Backend -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="flex items-center justify-between text-indigo-400">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                        <span class="text-[10px] uppercase tracking-wider code-font bg-indigo-500/10 px-2 py-0.5 rounded">Core</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-lg mb-2">Backend & Logic</h3>
+                        <p class="text-xs text-gray-500">PHP (Laravel), Node.js, JavaScript (ES6+), Clean Architecture.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Architecture & DB -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4 lg:col-span-2">
+                    <div class="flex items-center justify-between text-emerald-400">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                        <span class="text-[10px] uppercase tracking-wider code-font bg-emerald-500/10 px-2 py-0.5 rounded">High Scale</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-lg mb-2">Distributed Systems & Databases</h3>
+                        <p class="text-xs text-gray-500">Database Sharding, Redis Clustering, Master-Replica Topologies, PostgreSQL, MySQL query optimization.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: DevOps -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+                    <div class="flex items-center justify-between text-amber-400">
+                        <i data-lucide="container" class="w-6 h-6"></i>
+                        <span class="text-[10px] uppercase tracking-wider code-font bg-amber-500/10 px-2 py-0.5 rounded">Infra</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold text-lg mb-2">DevOps & Infra</h3>
+                        <p class="text-xs text-gray-500">Docker, Docker Compose, Microservices Isolation, CI/CD Pipelines.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: AI & Automation -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4 lg:col-span-4">
+                    <div class="flex items-center justify-between text-purple-400">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                        <span class="text-[10px] uppercase tracking-wider code-font bg-purple-500/10 px-2 py-0.5 rounded">Next Gen</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-white font-semibold text-lg mb-1">AI & Workflow Automation</h3>
+                            <p class="text-xs text-gray-400">Custom LLM Integrations, Multi-Agent Infrastructures, Autonomous Data Pipelines.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 items-center md:justify-end">
+                            <span class="px-3 py-1 bg-gray-900 border border-gray-800 text-gray-400 rounded-md text-xs code-font">N8N</span>
+                            <span class="px-3 py-1 bg-gray-900 border border-gray-800 text-gray-400 rounded-md text-xs code-font">Make.com</span>
+                            <span class="px-3 py-1 bg-gray-900 border border-gray-800 text-gray-400 rounded-md text-xs code-font">Prompt Eng.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-gray-900 my-12">
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="py-16 space-y-8">
+            <div class="flex items-center gap-4">
+                <span class="text-indigo-400 code-font text-sm">03.</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Professional Journey</h2>
+                <div class="h-[1px] bg-gray-800 flex-1"></div>
+            </div>
+
+            <div class="max-w-3xl space-y-8 relative before:absolute before:inset-0 before:left-4 before:w-[1px] before:bg-gray-800">
+                <!-- Job Item 1 -->
+                <div class="relative pl-12 group">
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-2.5 top-1.5 w-4 h-4 rounded-full bg-gray-950 border-2 border-indigo-500 group-hover:bg-indigo-500 transition-colors z-10"></div>
+                    
+                    <div class="space-y-2">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                            <h3 class="text-white font-semibold text-xl">Senior Software Engineer</h3>
+                            <span class="text-xs text-gray-500 code-font">2021 - Present</span>
+                        </div>
+                        <div class="text-sm text-indigo-400 font-medium">Ireland-Based Tech Company (Remote)</div>
+                        <ul class="space-y-2 text-sm text-gray-400 pt-2 list-none">
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400 mt-1">▹</span> Architected and maintained high-traffic backend applications, improving system uptime and reducing latency across distributed nodes.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400 mt-1">▹</span> Led the transition towards optimized caching strategies, implementing advanced Redis clustering to support concurrent user spikes.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-400 mt-1">▹</span> Collaborated with cross-functional global teams to deliver scalable software solutions aligned with international coding standards.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-900 my-12">
+
+        <!-- Projects Case Studies Section -->
+        <section id="projects" class="py-16 space-y-8">
+            <div class="flex items-center gap-4">
+                <span class="text-indigo-400 code-font text-sm">04.</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Case Studies & Built Systems</h2>
+                <div class="h-[1px] bg-gray-800 flex-1"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-gray-500">
+                            <i data-lucide="folder" class="w-8 h-8 text-indigo-400"></i>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                <a href="#" class="hover:text-white transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-white font-bold text-lg group-hover:text-indigo-400 transition-colors">OmniShard-1b</h3>
+                            <div class="text-[11px] font-medium text-emerald-400 uppercase tracking-wider code-font">Distributed Database Sharding</div>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            A custom-built distributed data sharding solution leveraging Docker, Redis clustering, and Laravel to handle ultra-high concurrency and horizontal database scaling. Optimized for high-throughput reads/writes.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 text-[10px] text-gray-500 code-font">
+                        <span>Laravel</span> • <span>Docker</span> • <span>Redis Cluster</span> • <span>Sharding</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-gray-500">
+                            <i data-lucide="folder" class="w-8 h-8 text-purple-400"></i>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                <a href="#" class="hover:text-white transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-white font-bold text-lg">Autonomous AI Agency</h3>
+                            <div class="text-[11px] font-medium text-purple-400 uppercase tracking-wider code-font">Enterprise-Grade Automation</div>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            An advanced automation ecosystem integrating customized LLMs and multi-agent systems via N8N/Make.com to automate end-to-end business operations and data processing pipelines.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 text-[10px] text-gray-500 code-font">
+                        <span>LLMs</span> • <span>N8N</span> • <span>Make.com</span> • <span>AI Agents</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-gray-500">
+                            <i data-lucide="folder" class="w-8 h-8 text-emerald-400"></i>
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                <a href="#" class="hover:text-white transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-white font-bold text-lg">Offline Sync Application</h3>
+                            <div class="text-[11px] font-medium text-amber-400 uppercase tracking-wider code-font">Hybrid Data Architecture</div>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Designed and developed a mobile-responsive electoral and voter management system utilizing IndexedDB and Capacitor for seamless offline capabilities, managing thousands of local records smoothly.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 text-[10px] text-gray-500 code-font">
+                        <span>IndexedDB</span> • <span>Capacitor</span> • <span>JS Event Loop</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-900 my-12">
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 text-center max-w-2xl mx-auto space-y-6">
+            <div class="flex items-center justify-center gap-2 text-indigo-400 code-font text-sm">
+                <span>05.</span> What’s Next?
+            </div>
+            <h2 class="text-4xl font-bold text-white tracking-tight">Get In Touch</h2>
+            <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                Whether you are looking to architect a scalable distributed system, integrate intelligent AI automations into your product, or just want to discuss clean code—my inbox is always open.
+            </p>
+            <div class="pt-6">
+                <!-- Replace with your real mail address -->
+                <a href="mailto:your.email@example.com" class="inline-flex items-center gap-2 px-8 py-4 bg-gray-950 border border-indigo-500/30 hover:border-indigo-500 text-indigo-400 font-medium rounded-xl transition-all shadow-xl shadow-indigo-500/5 code-font">
+                    Say Hello <i data-lucide="send" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-950 bg-gray-950/40 py-8 text-center text-xs text-gray-600 code-font">
+        <div>Designed & Built by Md Moinul Islam</div>
+        <div class="mt-2 text-[10px] text-gray-700">&copy; 2026 All Rights Reserved.</div>
+    </footer>
+
+    <!-- Logic Setup scripts for Interactive UX -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scroll Progress Bar Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+        });
+
+        // Mobile Menu Toggles
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu(open) {
+            if (open) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+            } else {
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            }
+        }
+
+        menuBtn.addEventListener('click', () => toggleMenu(true));
+        closeBtn.addEventListener('click', () => toggleMenu(false));
+        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+    </script>
+</body>
+</html>
