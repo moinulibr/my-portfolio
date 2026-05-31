@@ -1,484 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>MD. Moinul Islam - Backend Developer Portfolio</title>
-    <meta name="description"
-        content="Professional portfolio of MD. Moinul Islam – Backend Developer with expertise in Laravel, NestJS, PHP, Node.js, and React.js. Specialized in building scalable SaaS and microservice platforms.">
-    <meta name="keywords"
-        content="MD Moinul Islam, Backend Developer, Laravel, PHP, Node.js, NestJS, React, SaaS Developer, Microservice, Software Engineer Bangladesh">
-    <meta name="author" content="MD. Moinul Islam">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <title>Md. Moinul Islam | Full-Stack & Backend Engineer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
         html {
             scroll-behavior: smooth;
         }
+        body {
+            background-color: #050811;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Sticky Glassmorphism Navbar */
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(5, 8, 17, 0.75) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Card Hover Effects */
+        .premium-card {
+            background: rgba(13, 22, 44, 0.5);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
+        }
+        /* Featured Research Glowing Border */
+        .research-glow {
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            background: rgba(9, 21, 44, 0.6);
+        }
+        .research-glow:hover {
+            border-color: rgba(16, 185, 129, 0.7);
+            box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+        }
+        /* Profile Image Neon Aura Ring Animation */
+        .avatar-glow {
+            position: relative;
+        }
+        .avatar-glow::before {
+            content: '';
+            position: absolute;
+            top: -6px; left: -6px; right: -6px; bottom: -6px;
+            background: linear-gradient(135deg, #3b82f6, #10b981, #6366f1);
+            border-radius: 50%;
+            z-index: -1;
+            animation: spinAura 6s linear infinite;
+        }
+        @keyframes spinAura {
+            0% { transform: rotate(0deg); filter: blur(6px); }
+            100% { transform: rotate(360deg); filter: blur(6px); }
+        }
+        /* Fixed Scroll Reveal Animation System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-menu-open {
+            display: flex !important;
+        }
     </style>
 </head>
+<body>
 
-<body class="bg-gray-50 text-gray-800">
+    <div id="particles-js"></div>
 
-    <header id="top" class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-24 text-center">
-        <img src="moinul.png" alt="MD Moinul Islam Profile Picture"
-            class="w-48 h-48 rounded-full mx-auto border-4 border-white shadow-xl">
-        <h1 class="text-4xl font-bold mt-4">MD. Moinul Islam</h1>
-        <p class="mt-2 text-lg">🚀 Backend Engineer | NestJS, Node.js | Laravel, PHP | MongoDB, MySQL, PostgreSQL |
-            Next.js, React, JavaScript</p>
-
-        <!-- Navigation Links -->
-        <div class="mt-4 flex flex-wrap justify-center gap-2">
-            <a href="#about" class="bg-white text-purple-600 px-6 py-2 rounded-full shadow hover:bg-purple-100">About
-                Me</a>
-            <a href="#skills"
-                class="bg-white text-purple-600 px-6 py-2 rounded-full shadow hover:bg-purple-100">Skills</a>
-            <a href="#experience"
-                class="bg-white text-purple-600 px-6 py-2 rounded-full shadow hover:bg-purple-100">Experience</a>
-            <a href="#projects"
-                class="bg-white text-purple-600 px-6 py-2 rounded-full shadow hover:bg-purple-100">Projects</a>
-            <a href="#contact"
-                class="bg-white text-purple-600 px-6 py-2 rounded-full shadow hover:bg-purple-100">Contact</a>
-        </div>
-    </header>
-
-    <section id="about" class="py-16">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-            <p class="text-lg leading-relaxed">I am a dedicated Back-End Engineer with 4+ years of experience in
-                developing scalable, high-performance web applications. Skilled in PHP, Laravel, React, NodeJS, and
-                modern frameworks, I love solving complex problems and delivering elegant solutions. I actively
-                contribute to both SaaS and ecommerce platforms and enjoy collaborating with teams. Outside of coding, I
-                enjoy mentoring, learning new tech, and contributing to open-source projects.</p>
-        </div>
-    </section>
-
-    <section id="skills" class="py-16 bg-white">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-8">Technical Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-purple-100 p-4 rounded shadow">PHP</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Laravel, Lumen</div>
-                <div class="bg-purple-100 p-4 rounded shadow">NodeJS, NestJS</div>
-                <div class="bg-purple-100 p-4 rounded shadow">React, Next.js, Vue.js</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Redux, jQuery</div>
-                <div class="bg-purple-100 p-4 rounded shadow">MongoDB, MySQL, PostgreSQL</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Redis</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Docker</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Git, Jira, Trello</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Apache, Nginx</div>
-                <div class="bg-purple-100 p-4 rounded shadow">REST APIs, JSON</div>
-                <div class="bg-purple-100 p-4 rounded shadow">Bootstrap, Tailwind</div>
+    <nav class="glass-nav px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider gradient-text">MOINUL.DEV</a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#research" class="hover:text-blue-400 transition-colors">Research</a>
+                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
             </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-    </section>
 
-    <section id="experience" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4">Professional Experience</h2>
-            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-                Over 4 years of hands-on experience delivering scalable, microservice-based, and high-performance web
-                applications. Specialized in backend development, automation, and full-stack delivery using modern
-                technologies.
-            </p>
-            <div class="relative border-l-4 border-purple-600 pl-8 md:pl-16 mx-auto max-w-3xl">
+        <div id="mobile-menu" class="hidden flex-col mt-4 space-y-4 bg-slate-950/95 p-4 rounded-xl border border-white/5 md:hidden">
+            <a href="#about" class="text-gray-300 hover:text-blue-400 text-sm py-1 mobile-link">About</a>
+            <a href="#skills" class="text-gray-300 hover:text-blue-400 text-sm py-1 mobile-link">Skills</a>
+            <a href="#research" class="text-gray-300 hover:text-blue-400 text-sm py-1 mobile-link">Research</a>
+            <a href="#experience" class="text-gray-300 hover:text-blue-400 text-sm py-1 mobile-link">Experience</a>
+            <a href="#contact" class="text-gray-300 hover:text-blue-400 text-sm py-1 mobile-link">Contact</a>
+        </div>
+    </nav>
 
-                <div class="mb-12 relative">
-                    <div class="absolute w-4 h-4 bg-purple-600 rounded-full -left-6 top-1"></div>
-                    <h3 class="text-2xl font-bold">Software Engineer - <a href="https://amharctech.com/" target="_blank"
-                            class="text-blue-600">Amharc Tech</a></h3>
-                    <p class="text-sm text-gray-500">Dublin, Ireland | May 2021 – Present</p>
-                    <ul class="list-disc ml-5 mt-2 text-base leading-relaxed">
-                        <li>Designed and developed microservices for Job Manager, Inventory, Vendor, Rota, Form Builder,
-                            Mail Service, Subscription Billing & POS System.</li>
-                        <li>Built real-time data sync services integrating AliExpress & BigBuy for Ebaskat dropshipping
-                            platform.</li>
-                        <li>Automated complex business workflows: job scheduling, quoting, invoicing, billing, shift
-                            planning & inventory management.</li>
-                        <li>Integrated Stripe for subscription billing, recurring payments, and webhook-based event
-                            processing.</li>
-                        <li>Optimized system performance with advanced queue workers, cron jobs, caching, and
-                            distributed architecture.</li>
-                        <li>Delivered end-to-end solutions using NestJS, Laravel, Next.js, React.js, MySQL, PostgreSQL &
-                            MongoDB.</li>
-                        <li><strong>Technologies:</strong> PHP, Laravel, NestJS, React, Next.js, Stripe, MySQL,
-                            PostgreSQL, MongoDB, Redis, Queue, Microservices</li>
-                    </ul>
+    <div class="content-layer pt-28">
+
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center px-6 py-12">
+            <div class="text-center max-w-5xl">
+                
+                <div class="avatar-glow w-56 h-56 md:w-64 md:h-64 mx-auto mb-10 rounded-full shadow-[0_0_50px_rgba(59,130,246,0.3)]">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-slate-950">
+                        <img src="my-profile-picture.png" alt="Md. Moinul Islam" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">
+                    <span class="text-white">Hi,</span> <span class="text-yellow-400">I'm</span> <span class="gradient-text">Md. Moinul Islam</span>
+                </h1>
+                
+                <div class="text-2xl md:text-4xl font-bold text-gray-200 h-14 mb-8">
+                    I am a <span id="typed-text" class="text-blue-400"></span>
                 </div>
 
-                <div class="relative">
-                    <div class="absolute w-4 h-4 bg-purple-600 rounded-full -left-6 top-1"></div>
-                    <h3 class="text-2xl font-bold">Junior Software Engineer - <a href="https://www.rdnetworkbd.com/"
-                            target="_blank" class="text-blue-600">RD Network BD</a></h3>
-                    <p class="text-sm text-gray-500">Dhaka, Bangladesh | Feb 2020 – May 2021</p>
-                    <ul class="list-disc ml-5 mt-2 text-base leading-relaxed">
-                        <li>Developed modules for Inventory POS, HR Logistic, Courier Management, Car Management, and
-                            more internal business systems.</li>
-                        <li>Designed dynamic forms with AJAX for automated maintenance scheduling and expense
-                            management.</li>
-                        <li>Built custom admin & staff panels with role-based access and workflow automation.</li>
-                        <li><strong>Technologies:</strong> PHP, Laravel, Lumen, jQuery, Bootstrap, MySQL</li>
-                    </ul>
-                </div>
-
-                <p class="text-center text-lg text-gray-700 mt-12 max-w-3xl mx-auto">
-                    Passionate about clean architecture, scalable microservices, automation, and delivering
-                    business-focused software solutions.
+                <p class="text-gray-400 md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+                    Crafting highly scalable backend architectures, high-performance distributed microservices, and enterprise SaaS solutions that handle high-volume demands effortlessly.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects" class="py-16">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">AT SMS – Servicing SaaS</h3>
-                    <p class="text-sm text-gray-600">Full microservice-based SaaS system for Job Manager, Rota,
-                        Inventory, Vendor, Form Builder, Mail Service, Subscription Billing & more.</p>
-                    <p class="text-sm"><strong>Tech:</strong> NestJS, Laravel, Next.js, React.js, MySQL, PostgreSQL,
-                        MongoDB, Redis, Microservices, JWT, Mailgun, Twilio</p>
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <a href="#experience" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 font-semibold text-white shadow-lg shadow-blue-600/30 hover:scale-105 transition-all duration-300">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3.5 rounded-xl bg-slate-900/60 border border-slate-700 font-semibold text-gray-200 hover:bg-slate-800 hover:border-blue-400 transition-all duration-300">
+                        Hire Me
+                    </a>
+                    <a href="https://drive.google.com/file/d/1_2KBVeuHKaPuRyHB2isU5YFDlZe4MWTa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-slate-900/60 border border-slate-700 font-semibold text-gray-200 hover:bg-slate-800 hover:border-blue-400 transition-all duration-300">
+                        Download CV
+                    </a>
                 </div>
 
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">AT POS – Smart Point of Sale</h3>
-                    <p class="text-sm text-gray-600">POS system with inventory batch tracking, advanced stock
-                        adjustments, analytics, split payments & role-based access control.</p>
-                    <p class="text-sm"><strong>Tech:</strong> NestJS, Laravel, Next.js, MySQL, PostgreSQL, JWT</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Ebaskat – Dropshipping Platform</h3>
-                    <p class="text-sm text-gray-600">Backend for multi-supplier dropshipping (AliExpress, BigBuy) with
-                        live data sync and automated product management.</p>
-                    <p class="text-sm"><strong>Tech:</strong> Laravel, MySQL, Queue, Cron, API Integration</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Data Sync Service</h3>
-                    <p class="text-sm text-gray-600">Independent microservice for continuous inventory & pricing sync
-                        between suppliers and platforms.</p>
-                    <p class="text-sm"><strong>Tech:</strong> Laravel, Queue, Cron, MySQL, API Integration</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Subscription Management System</h3>
-                    <p class="text-sm text-gray-600">Billing automation with Stripe integration, recurring payments,
-                        webhook handling & invoice notifications.</p>
-                    <p class="text-sm"><strong>Tech:</strong> Laravel, Inertia.js, React.js, Stripe, MySQL</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Form Builder</h3>
-                    <p class="text-sm text-gray-600">Dynamic form builder with conditional fields, validations, and
-                        API-driven submission pipeline.</p>
-                    <p class="text-sm"><strong>Tech:</strong> Laravel, NestJS, React, MySQL</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Mail Service</h3>
-                    <p class="text-sm text-gray-600">Standalone microservice for transactional, notification & marketing
-                        emails with template rendering.</p>
-                    <p class="text-sm"><strong>Tech:</strong> Lumen, Queue, Mailgun, Cron Jobs</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Quotation-MS</h3>
-                    <p class="text-sm text-gray-600">Quotation management module for SaaS platform, offering full REST
-                        API support for quotation creation, multi-version handling, status transitions, and approval
-                        workflows across multi-tenant environments.</p>
-                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel, REST API, MySQL, Multi-Tenant SaaS</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Village Cafe</h3>
-                    <p class="text-sm text-gray-600">Online restaurant management platform allowing customers to place
-                        dine-in orders, takeout, table reservations with real-time kitchen updates, dynamic menu
-                        control, and seamless asynchronous ordering experience.</p>
-                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel, jQuery, Ajax, Bootstrap, MySQL</p>
-                </div>
-
-                <div class="bg-white p-6 rounded shadow">
-                    <h3 class="font-bold text-lg">Other Contributions</h3>
-                    <p class="text-sm text-gray-600">Magica-Maids, Browne Solar, Agua Clean, I Dare Space, Amharc V4,
-                        Irish Steel, and multiple client projects.</p>
-                    <p class="text-sm"><strong>Tech:</strong> PHP, Laravel, Custom Stacks, MySQL</p>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mt-6">
+                    <div class="bg-slate-900/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex flex-col justify-center items-center">
+                        <span class="text-3xl md:text-4xl font-extrabold text-cyan-400 mb-1">
+                            <span class="counter-value" data-target="5">0</span>+
+                        </span>
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Years Experience</span>
+                    </div>
+                    <div class="bg-slate-900/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex flex-col justify-center items-center">
+                        <span class="text-3xl md:text-4xl font-extrabold text-cyan-400 mb-1">
+                            <span class="counter-value" data-target="20">0</span>+
+                        </span>
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Projects Completed</span>
+                    </div>
+                    <div class="bg-slate-900/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex flex-col justify-center items-center">
+                        <span class="text-3xl md:text-4xl font-extrabold text-cyan-400 mb-1">
+                            <span class="counter-value" data-target="5">0</span>+
+                        </span>
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">SaaS Systems</span>
+                    </div>
+                    <div class="bg-slate-900/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex flex-col justify-center items-center">
+                        <span class="text-3xl md:text-4xl font-extrabold text-cyan-400 mb-1">
+                            <span class="counter-value" data-target="10">0</span>+
+                        </span>
+                        <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">API Integrations</span>
+                    </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="py-20 bg-gradient-to-br from-purple-600 to-blue-500 text-white">
-        <div class="max-w-5xl mx-auto text-center px-4">
-            <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
-            <p class="text-lg mb-10 max-w-xl mx-auto">
-                Feel free to reach out for collaborations, freelance opportunities, or just a friendly hello! Let's
-                build something amazing together.
-            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left items-center">
+        <section id="about" class="py-24 max-w-5xl mx-auto px-6 reveal">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold tracking-tight mb-2">About Me</h2>
+                    <div class="h-1 w-20 bg-blue-500 rounded-full"></div>
+                </div>
+                <div class="md:col-span-2 text-gray-400 leading-relaxed space-y-4">
+                    <p class="text-lg">
+                        I am a backend-focused Software Engineer with <span class="text-white font-medium">5+ years of professional experience</span> designing and optimizing modern distributed enterprise systems. Currently working remotely for Ireland-based fintech ecosystem engineering.
+                    </p>
+                    <p>
+                        My core philosophy centers around system performance, database optimization, and high availability. I bridge the technical gap between architectural concepts and seamless user experiences, prioritizing clean code and robust systems above all else.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                <div class="space-y-6 bg-purple-700 bg-opacity-30 rounded-lg p-6 shadow-lg max-h-[480px] overflow-auto">
-                    <div class="flex items-center space-x-4 border-b border-purple-400 pb-2">
-                        <svg class="w-6 h-6 text-purple-300 flex-shrink-0" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M16 12v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
+
+        <section id="skills" class="py-24 max-w-6xl mx-auto px-6 bg-slate-950/20 rounded-3xl border border-white/5 my-12 reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Technical Skills</h2>
+                <p class="text-gray-400">The tools, languages, and technical frameworks I specialize in</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-blue-400 text-3xl mb-5"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-4">Languages & Frameworks</h3>
+                    <ul class="space-y-3.5 text-sm text-gray-300">
+                        <li class="flex items-center gap-2.5"><i class="devicon-php-plain text-blue-500 text-base"></i> PHP (Laravel & Lumen)</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-javascript-plain text-yellow-500 text-base"></i> JavaScript / TypeScript</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-nestjs-plain text-red-500 text-base"></i> Node.js (NestJS)</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-react-original text-cyan-400 text-base"></i> React.js & Next.js</li>
+                    </ul>
+                </div>
+
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-emerald-400 text-3xl mb-5"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-4">Database Management</h3>
+                    <ul class="space-y-3.5 text-sm text-gray-300">
+                        <li class="flex items-center gap-2.5"><i class="devicon-mysql-plain text-blue-400 text-base"></i> MySQL & PostgreSQL</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-mongodb-plain text-green-500 text-base"></i> MongoDB & Redis</li>
+                        <li class="flex items-center gap-2.5 text-emerald-400 font-medium"><i class="fa-solid fa-server text-xs"></i> Database Sharding</li>
+                        <li class="flex items-center gap-2.5 text-emerald-400 font-medium"><i class="fa-solid fa-network-wired text-xs"></i> Partitioning & Replication</li>
+                    </ul>
+                </div>
+
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-purple-400 text-3xl mb-5"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-4">Architecture & DevOps</h3>
+                    <ul class="space-y-3.5 text-sm text-gray-300">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-cloud text-purple-400 text-xs"></i> SaaS Architecture</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-cubes text-purple-400 text-xs"></i> Microservices Pattern</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-docker-plain text-blue-400 text-base"></i> Docker Containerization</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-rabbitmq-plain text-orange-500 text-base"></i> RabbitMQ & Redis Queues</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-nginx-original text-green-600 text-base"></i> Nginx & RESTful APIs</li>
+                    </ul>
+                </div>
+
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-amber-400 text-3xl mb-5"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-4">Integrations & Tools</h3>
+                    <ul class="space-y-3.5 text-sm text-gray-300">
+                        <li class="flex items-center gap-2.5"><i class="fa-brands fa-cc-stripe text-indigo-400 text-base"></i> Stripe Payment Gateway</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-envelope-open-text text-amber-500 text-xs"></i> Mailgun & Twilio</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-bolt text-yellow-400 text-xs"></i> Pusher (Websockets)</li>
+                        <li class="flex items-center gap-2.5"><i class="devicon-git-plain text-orange-600 text-base"></i> Git, Jira & Trello</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="research" class="py-24 max-w-5xl mx-auto px-6 reveal">
+            <div class="premium-card research-glow p-8 md:p-12 rounded-3xl border relative overflow-hidden">
+                <div class="absolute -right-24 -top-24 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="animate-ping flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                    <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        Featured Architecture Research
+                    </span>
+                </div>
+                
+                <h2 class="text-4xl font-extrabold text-white mb-2">OmniShard-1B</h2>
+                <p class="text-xl text-emerald-400 font-semibold mb-8">Scalable Database Architecture Concept (1 Billion+ Rows Data Handling)</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+                    <div class="p-6 rounded-xl bg-slate-950/70 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <h4 class="text-white font-bold flex items-center gap-2 mb-2"><i class="fa-solid fa-bezier-curve text-emerald-400"></i> Horizontal Sharding & Routing</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Explored core horizontal sharding strategies across distributed MySQL clusters using Redis for dynamic cache-routing layers.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-950/70 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <h4 class="text-white font-bold flex items-center gap-2 mb-2"><i class="fa-solid fa-fingerprint text-emerald-400"></i> Distributed K-Ordered ID Generation</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Architected a high-velocity 16-digit K-Ordered Sequential ID Generator using Timestamp + Shard ID + Redis hashes to prevent multi-node indexing collision.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-950/70 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <h4 class="text-white font-bold flex items-center gap-2 mb-2"><i class="fa-solid fa-shield-halved text-emerald-400"></i> High-Performance Auth Strategy</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Maximized system throughput with optimized Redis-backed stateless authentication mechanisms to safely eliminate repetitive database overheads.</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-950/70 border border-white/5 hover:border-emerald-500/30 transition-all">
+                        <h4 class="text-white font-bold flex items-center gap-2 mb-2"><i class="fa-solid fa-arrow-down-1-9 text-emerald-400"></i> Data Stream Pipelines</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Designed cursor-based pagination wrappers alongside RabbitMQ/Redis Queue architectures for fast asynchronous massive dataset data streaming consistency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="experience" class="py-24 max-w-5xl mx-auto px-6 reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Professional Experience</h2>
+                <p class="text-gray-400">Commercial projects and systems I have engineered successfully</p>
+            </div>
+
+            <div class="space-y-12">
+                
+                <div class="border-l-2 border-blue-500/40 pl-6 md:pl-10 relative">
+                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1.5 border-4 border-slate-900 shadow-md"></div>
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                         <div>
-                            <h3 class="font-bold text-2xl">Email</h3>
-                            <p class="text-lg mt-1">
-                                <a href="mailto:moinulibr@gmail.com"
-                                    class="underline hover:text-purple-300 transition-colors">
-                                    moinulibr@gmail.com
-                                </a>
+                            <h3 class="text-xl font-bold text-white">Software Engineer (Remote)</h3>
+                            <p class="text-gray-400 font-medium">Amharc Tech, Dublin, Ireland</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                            MAY 2021 - PRESENT
+                        </span>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">AT SMS-Servicing SaaS</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">NestJS, Next.js, Laravel, MySQL, MongoDB</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Transformed field service management. Engineered core scalable microservices using NestJS and Laravel to manage full job cycles, built dynamic Form Builders with state validations, and introduced an automated conflict-free shift scheduling engine.
+                            </p>
+                        </div>
+
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">AT POS - Smart Point of Sale</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">NestJS, Next.js, Laravel, MySQL, Nginx</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Enabled modern high-speed enterprise inventory tracking featuring smart product batch tracking, automated vendor updates coordination, multi-tier automated split-payment frameworks, and dynamic security access structures.
+                            </p>
+                        </div>
+
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">Ebaskat - Dropshipping Platform</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">PHP, Laravel, Lumen, MySQL, Queues, Cron Job</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Managed core system engineering syncing AliExpress and BigBuy APIs. Authored a proprietary custom structural Data Sync Service handler handling inventory fluctuations, automated dynamic price logic engines, and structural failed sync alerts.
+                            </p>
+                        </div>
+
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">Subscription Management System</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">Laravel, Inertia.js, React.js, Stripe</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Developed multi-tier dynamic subscription layers with robust Stripe integrations. Managed automated user billing states change triggers on downgrade/expiry events, webhook systems tracking, and reactive Inertia-driven full SPA dashboards.
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex items-center space-x-4 border-b border-purple-400 pb-2 pt-4">
-                        <svg class="w-6 h-6 text-purple-300 flex-shrink-0" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 6.18 2 2 0 0 1 5 4h3a2 2 0 0 1 2 1.72 12.22 12.22 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 12.5a16 16 0 0 0 6.5 6.5l1.85-1.85a2 2 0 0 1 2.11-.45 12.22 12.22 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                            </path>
-                        </svg>
-                        <div>
-                            <h3 class="font-bold text-2xl">Phone</h3>
-                            <p class="text-lg mt-1">+880 171 279 4033</p>
-                        </div>
+                    <div class="mt-6 text-left flex items-center gap-2 text-sm text-blue-400/90 bg-blue-950/30 p-4 rounded-xl border border-blue-500/10 max-w-xl">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        <span>Plus engineered over <strong>12+ custom architectural macro-modules</strong> for internal FinTech workflows & background data synchronization networks.</span>
                     </div>
+                </div>
 
-                    <div class="flex items-center space-x-4 pt-4">
-                        <svg class="w-6 h-6 text-purple-300 flex-shrink-0" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M16 8a6 6 0 1 1-8 0"></path>
-                            <path d="M12 14v7"></path>
-                            <path d="M8 21h8"></path>
-                        </svg>
+                <div class="border-l-2 border-emerald-500/40 pl-6 md:pl-10 relative reveal">
+                    <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1.5 border-4 border-slate-900 shadow-md"></div>
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                         <div>
-                            <h3 class="font-bold text-2xl">Connect</h3>
-                            <p class="text-lg mt-1">
-                                <a href="https://github.com/moinulibr" target="_blank" rel="noopener noreferrer"
-                                    class="underline hover:text-purple-300 transition-colors">GitHub</a>
-                            </p>
-                            <p class="text-lg mt-1">
-                                <a href="https://linkedin.com/in/moinulibr" target="_blank" rel="noopener noreferrer"
-                                    class="underline hover:text-purple-300 transition-colors">LinkedIn</a>
-                            </p>
+                            <h3 class="text-xl font-bold text-white">Junior Software Engineer</h3>
+                            <p class="text-gray-400 font-medium">RD Network BD, Mirpur 1, Dhaka</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                            FEB 2020 - MAY 2021
+                        </span>
+                    </div>
+                    
+                    <div class="premium-card p-6 rounded-xl mt-4 max-w-3xl">
+                        <h4 class="text-base font-bold text-white mb-2">Core Module Architecture Development</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Developed core architectural modules for internal Inventory POS networks, automated HR Logistics metric systems trackers, and engineered complex vehicle asset maintenance allocation software pipelines using dynamic asynchronous AJAX forms and Laravel framework optimization patterns.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 border border-white/5 text-gray-400"><i class="fa-solid fa-box-archive text-emerald-400 mr-1.5"></i> Courier Management Core Module</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 border border-white/5 text-gray-400"><i class="fa-solid fa-box-archive text-emerald-400 mr-1.5"></i> Expense Tracking Framework</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 border border-white/5 text-emerald-400 font-semibold">+ More Live Internal Infrastructure Modules</span>
                         </div>
                     </div>
                 </div>
 
-                <form action="https://formspree.io/f/xyzjgkgk" method="POST"
-                    class=" bg-white text-gray-800 p-8 rounded-lg shadow-lg max-h-[480px] overflow-auto">
-                    <div class="mb-6">
-                        <label class="block mb-2 font-bold text-gray-700">Name</label>
-                        <input type="text" name="name" required
-                            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-                    </div>
-                    <div class="mb-6">
-                        <label class="block mb-2 font-bold text-gray-700">Email</label>
-                        <input type="email" name="email" required
-                            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-                    </div>
-                    <div class="mb-6">
-                        <label class="block mb-2 font-bold text-gray-700">Phone Number</label>
-                        <input type="tel" name="phone" pattern="[+0-9\s\-]{7,15}" placeholder="+880 1*********"
-                            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                            required />
-                    </div>
-                    <div class="mb-6">
-                        <label class="block mb-2 font-bold text-gray-700">Message</label>
-                        <textarea name="message" rows="5" required
-                            class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="bg-purple-600 text-white px-6 py-3 rounded hover:bg-purple-700 transition-colors font-semibold">Send
-                        Me Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-gray-800 text-white py-6 px-6 flex justify-center relative">
-        <p class="text-center">&copy; 2025 MD. Moinul Islam | Designed with ❤️</p>
-        <a href="#top"
-            class="absolute right-6 top-1/2 -translate-y-1/2 bg-white text-purple-600 px-4 py-1 rounded-full shadow hover:bg-purple-100">
-            ↑ Top
-        </a>
-    </footer>
 
+        <section id="contact" class="py-24 max-w-4xl mx-auto px-6 text-center reveal">
+            <div class="premium-card p-10 rounded-3xl border border-white/5">
+                <h2 class="text-3xl font-bold mb-2">Let's Connect</h2>
+                <p class="text-gray-400 mb-8 max-w-md mx-auto">Whether you want to discuss a system scalability problem or an exciting enterprise project, drop me a message.</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-2xl mx-auto">
+                    <a href="mailto:moinulibr@gmail.com" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 transition-all duration-300 flex flex-col items-center gap-2">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                        <span class="text-xs font-medium">Email Me</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/moinulibr/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-blue-500 hover:text-white hover:bg-blue-600 transition-all duration-300 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                        <span class="text-xs font-medium">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/moinulibr" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-white hover:bg-slate-700 transition-all duration-300 flex flex-col items-center gap-2">
+                        <i class="fa-brands fa-github text-xl"></i>
+                        <span class="text-xs font-medium">GitHub</span>
+                    </a>
+                    <a href="tel:+8801712794033" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all duration-300 flex flex-col items-center gap-2">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                        <span class="text-xs font-medium">01712794033</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 text-sm text-gray-600 border-t border-white/5">
+            &copy; 2026 Md. Moinul Islam. All rights reserved.
+        </footer>
+
+    </div>
+
+    <script>
+        // A. Mobile Navigation Drawer Trigger
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('mobile-menu-open');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('mobile-menu-open');
+            });
+        });
+
+        // B. Dynamic Typewriter Config via Typed.js
+        var typed = new Typed('#typed-text', {
+            strings: [
+                'Full-Stack Engineer.',
+                'Backend System Architect.',
+                'SaaS & Microservices Expert.',
+                'Scalability Enthusiast.'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+            cursorChar: '|'
+        });
+
+        // C. Particles Node Graph Setup
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 90, "density": { "enable": true, "value_area": 900 } },
+                "color": { "value": "#3b82f6" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.45, "random": true, "anim": { "enable": true, "speed": 1 } },
+                "size": { "value": 3.2, "random": true },
+                "line_linked": { "enable": true, "distance": 140, "color": "#1e293b", "opacity": 0.55, "width": 1.2 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 150, "line_linked": { "opacity": 0.8 } } }
+            },
+            "retina_detect": true
+        });
+
+        // D. Fixed/Enhanced Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: "0px 0px -20px 0px"
+        });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        // FIX 2 Engine: High-Performance Lightweight Live Incremental Counting Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter-value');
+            const speed = 40; // Higher values = slower execution duration
+
+            const startCounting = (counter) => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let count = 0;
+                
+                // Fine-tuning the dynamic increment fraction
+                const increment = Math.ceil(target / speed);
+
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = count;
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            };
+
+            // Triggering counter engine instantly on DOM Load for maximum impact
+            counters.forEach(counter => startCounting(counter));
+        });
+    </script>
 </body>
-
 </html>
-
-
-<!-- will be filtered 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>MD. Moinul Islam - Backend Developer Portfolio</title>
-    <meta name="description" content="Professional portfolio of MD. Moinul Islam – Backend Developer with expertise in Laravel, NestJS, PHP, Node.js, and React.js. Specialized in building scalable SaaS and microservice platforms.">
-    <meta name="keywords" content="MD Moinul Islam, Backend Developer, Laravel, PHP, Node.js, NestJS, React, SaaS Developer, Microservice, Software Engineer Bangladesh">
-    <meta name="author" content="MD. Moinul Islam">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="MD. Moinul Islam - Backend Developer Portfolio">
-    <meta property="og:description" content="Backend Developer specializing in SaaS, Microservices, Laravel, NestJS, PHP, Node.js.">
-    <meta property="og:image" content="https://yourdomain.com/moinul.png">
-    <meta property="og:url" content="https://yourdomain.com/">
-    <meta property="og:type" content="website">
-
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MD. Moinul Islam - Backend Developer Portfolio">
-    <meta name="twitter:description" content="Backend Developer specializing in SaaS, Microservices, Laravel, NestJS, PHP, Node.js.">
-    <meta name="twitter:image" content="https://yourdomain.com/moinul.png">
-
-    
-    <link rel="icon" href="favicon.png" type="image/png">
-
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-
-<body class="bg-gray-50 text-gray-800">
-    <header id="top" class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-20 text-center">
-        <img src="moinul.png" alt="Profile picture of MD Moinul Islam" class="w-40 h-40 rounded-full mx-auto border-4 border-white shadow-xl">
-        <h1 class="text-4xl font-bold mt-4">MD. Moinul Islam</h1>
-        <p class="mt-3 text-lg">🚀 Backend Engineer | Laravel | NestJS | SaaS & Microservice Expert</p>
-        <nav class="mt-6 flex flex-wrap justify-center gap-3">
-            <a href="#about" class="bg-white text-purple-600 px-5 py-2 rounded-full shadow hover:bg-purple-100">About Me</a>
-            <a href="#skills" class="bg-white text-purple-600 px-5 py-2 rounded-full shadow hover:bg-purple-100">Skills</a>
-            <a href="#experience" class="bg-white text-purple-600 px-5 py-2 rounded-full shadow hover:bg-purple-100">Experience</a>
-            <a href="#projects" class="bg-white text-purple-600 px-5 py-2 rounded-full shadow hover:bg-purple-100">Projects</a>
-            <a href="#contact" class="bg-white text-purple-600 px-5 py-2 rounded-full shadow hover:bg-purple-100">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about" class="py-16">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-                <p class="text-lg leading-relaxed">I am a dedicated Back-End Engineer with 4+ years of experience in developing scalable, high-performance web applications. Skilled in PHP, Laravel, React, NodeJS, and modern frameworks, I love solving complex problems and delivering elegant solutions. Passionate about SaaS platforms, microservices, automation, and business-oriented solutions.</p>
-            </div>
-        </section>
-
-        <section id="skills" class="py-16 bg-white">
-            <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-3xl font-semibold mb-8">Technical Skills</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-purple-100 p-4 rounded shadow">PHP / Laravel / Lumen</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">NestJS / NodeJS</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">React / Next.js / Vue.js</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">MySQL / PostgreSQL / MongoDB</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">Redis / Queue / Cron Jobs</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">Docker / Microservices</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">Stripe / Mailgun / Twilio</div>
-                    <div class="bg-purple-100 p-4 rounded shadow">Git / Jira / REST API</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-4">Professional Experience</h2>
-                <div class="border-l-4 border-purple-600 pl-4 md:pl-16">
-                    <div class="mb-12">
-                        <h3 class="text-2xl font-bold">Software Engineer - <a href="https://amharctech.com/" target="_blank" class="text-blue-600">Amharc Tech</a></h3>
-                        <p class="text-sm text-gray-500">Dublin, Ireland | May 2021 – Present</p>
-                        <ul class="list-disc ml-5 mt-2">
-                            <li>Built SaaS microservices for Job Manager, Inventory, Vendor, Rota, Form Builder, Subscription Billing & POS System.</li>
-                            <li>Real-time integrations with AliExpress, BigBuy, Stripe & external APIs.</li>
-                            <li>Automation of job scheduling, quoting, invoicing, shift planning & inventory management.</li>
-                            <li>Tech: Laravel, NestJS, React, Next.js, Stripe, MySQL, PostgreSQL, Redis, Microservices</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold">Junior Software Engineer - <a href="https://www.rdnetworkbd.com/" target="_blank" class="text-blue-600">RD Network BD</a></h3>
-                        <p class="text-sm text-gray-500">Dhaka, Bangladesh | Feb 2020 – May 2021</p>
-                        <ul class="list-disc ml-5 mt-2">
-                            <li>Built Inventory POS, HR Logistic, Courier Management & Car Management modules.</li>
-                            <li>Created dynamic AJAX-based forms for maintenance scheduling & expense tracking.</li>
-                            <li>Tech: PHP, Laravel, Lumen, jQuery, Bootstrap, MySQL</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-16">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded shadow">
-                        <h3 class="font-bold text-lg">AT SMS – SaaS Platform</h3>
-                        <p class="text-sm text-gray-600">Full microservice-based SaaS system with Rota, Inventory, Vendor, Mail Service, POS and more.</p>
-                        <p class="text-sm mt-2"><strong>Tech:</strong> Laravel, NestJS, React, MySQL, PostgreSQL, Redis, Microservices</p>
-                    </div>
-                    <div class="bg-white p-6 rounded shadow">
-                        <h3 class="font-bold text-lg">Ebaskat Dropshipping</h3>
-                        <p class="text-sm text-gray-600">Backend platform with supplier integration (AliExpress, BigBuy) and automated inventory sync.</p>
-                        <p class="text-sm mt-2"><strong>Tech:</strong> Laravel, MySQL, Queue, Cron Jobs, API Integration</p>
-                    </div>
-                    <div class="bg-white p-6 rounded shadow">
-                        <h3 class="font-bold text-lg">AT POS System</h3>
-                        <p class="text-sm text-gray-600">Inventory batch tracking, stock adjustments, analytics, split payments & access control.</p>
-                        <p class="text-sm mt-2"><strong>Tech:</strong> NestJS, Laravel, PostgreSQL</p>
-                    </div>
-                    <div class="bg-white p-6 rounded shadow">
-                        <h3 class="font-bold text-lg">Mail Service</h3>
-                        <p class="text-sm text-gray-600">Microservice for transactional, notification & marketing emails with template support.</p>
-                        <p class="text-sm mt-2"><strong>Tech:</strong> Lumen, Mailgun, Queue, Cron Jobs</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-20 bg-gradient-to-br from-purple-600 to-blue-500 text-white">
-            <div class="max-w-5xl mx-auto text-center px-4">
-                <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
-                <p class="text-lg mb-10">Available for full-time, freelance or SaaS consulting projects. Let’s collaborate!</p>
-                <div class="flex justify-center gap-8">
-                    <a href="mailto:moinulibr@gmail.com" class="underline hover:text-purple-300 text-lg">moinulibr@gmail.com</a>
-                    <a href="https://linkedin.com/in/moinulibr" target="_blank" class="underline hover:text-purple-300 text-lg">LinkedIn</a>
-                    <a href="https://github.com/moinulibr" target="_blank" class="underline hover:text-purple-300 text-lg">GitHub</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-6 relative">
-        <p class="text-center">&copy; 2025 MD. Moinul Islam | All Rights Reserved</p>
-        <a href="#top" class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white text-purple-600 px-4 py-1 rounded-full shadow hover:bg-purple-100">↑ Top</a>
-    </footer>
-</body>
-
-</html> -->
