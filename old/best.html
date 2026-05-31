@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Full-Stack & Backend Engineer</title>
+    <!-- Tailwind CSS (v4) for Premium UI styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Particles.js for Interactive Moving Points Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Typed.js for Smooth Typewriter Animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Smooth Scrolling and Custom Scrollbar styling */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #080c14;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .content-layer {
+            position: relative;
+            z-index: 10;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .premium-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .premium-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080c14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Moving Points Layer -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation Header -->
+    <nav class="content-layer fixed top-0 w-full z-50 bg-slate-950/70 backdrop-blur-md border-b border-white/5 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider gradient-text">MOINUL.DEV</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#research" class="hover:text-blue-400 transition-colors">Research</a>
+                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper (SPA Layout) -->
+    <div class="content-layer pt-16">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="min-h-screen flex items-center justify-center px-6">
+            <div class="text-center max-w-4xl">
+                <!-- Profile Image -->
+                <div class="w-36 h-36 mx-auto mb-8 rounded-full border-4 border-blue-500/20 overflow-hidden shadow-2xl shadow-blue-500/10">
+                    <img src="my-profile-picture.png" alt="Md. Moinul Islam" class="w-full h-full object-cover">
+                </div>
+                
+                <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-4">
+                    Hi, I'm <span class="gradient-text">Md. Moinul Islam</span>
+                </h1>
+                
+                <!-- Typing Animation Target Element -->
+                <div class="text-xl md:text-3xl font-semibold text-gray-300 h-12 mb-6">
+                    <span id="typed-text" class="text-blue-400"></span>
+                </div>
+
+                <p class="text-gray-400 md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+                    Crafting highly scalable backend architectures, high-performance distributed microservices, and enterprise SaaS solutions that handle high-volume demands effortlessly.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#experience" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 font-semibold text-white shadow-lg shadow-blue-600/20 hover:scale-105 transition-all duration-300">
+                        Explore Work
+                    </a>
+                    <a href="mailto:moinulibr@gmail.com" class="px-8 py-3.5 rounded-xl bg-slate-900/80 border border-slate-700 font-semibold hover:bg-slate-800 transition-all duration-300">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 2. ABOUT ME SECTION -->
+        <section id="about" class="py-24 max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1 text-center md:text-left">
+                    <h2 class="text-3xl font-bold tracking-tight mb-2">About Me</h2>
+                    <div class="h-1 w-20 bg-blue-500 mx-auto md:mx-0 rounded-full"></div>
+                </div>
+                <div class="md:col-span-2 text-gray-400 leading-relaxed space-y-4">
+                    <p class="text-lg">
+                        I am a backend-focused Software Engineer with <span class="text-white font-medium">5+ years of professional experience</span> designing and optimization of modern distributed enterprise systems. Currently working remotely for Ireland-based fintech ecosystem engineering.
+                    </p>
+                    <p>
+                        My core philosophy centers around system performance, database optimization, and high availability. I bridge the technical gap between architectural concepts and seamless user experiences, prioritizing clean code and robust systems above all else.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. TECH STACK MATRIX SECTION -->
+        <section id="skills" class="py-24 max-w-6xl mx-auto px-6 bg-slate-950/30 rounded-3xl border border-white/5 my-12">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Technical Skills</h2>
+                <p class="text-gray-400">The tools, languages, and technical frameworks I specialize in</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-blue-400 text-2xl mb-4"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Languages & Frameworks</h3>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>PHP (Laravel & Lumen)</li>
+                        <li>JavaScript / TypeScript</li>
+                        <li>Node.js (NestJS)</li>
+                        <li>React.js & Next.js</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-emerald-400 text-2xl mb-4"><i class="fa-solid fa-database"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Database Management</h3>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>MySQL & PostgreSQL</li>
+                        <li>MongoDB & Redis</li>
+                        <li class="pt-2 text-emerald-400 font-medium">Database Sharding</li>
+                        <li class="text-emerald-400 font-medium">Partitioning & Replication</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-purple-400 text-2xl mb-4"><i class="fa-solid fa-cubes"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Architecture & DevOps</h3>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>SaaS Architecture</li>
+                        <li>Microservices Pattern</li>
+                        <li>Docker Containerization</li>
+                        <li>RabbitMQ & Redis Queues</li>
+                        <li>Nginx & RESTful APIs</li>
+                    </ul>
+                </div>
+                <!-- Card 4 -->
+                <div class="premium-card p-6 rounded-2xl">
+                    <div class="text-amber-400 text-2xl mb-4"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-3">Integrations & Tools</h3>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li>Stripe Payment Gateway</li>
+                        <li>Mailgun & Twilio</li>
+                        <li>Pusher (Websockets)</li>
+                        <li>Git, Jira & Trello</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. FEATURED RESEARCH PROJECT SECTION -->
+        <section id="research" class="py-24 max-w-5xl mx-auto px-6">
+            <div class="premium-card p-8 md:p-12 rounded-3xl border border-blue-500/10 relative overflow-hidden">
+                <div class="absolute -right-16 -top-16 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+                
+                <span class="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                    Featured Scalability Research
+                </span>
+                
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-2">OmniShard-1B</h2>
+                <p class="text-lg text-emerald-400 font-medium mb-6">Scalable Database Architecture Concept (1 Billion+ Rows Data Handling)</p>
+                
+                <div class="space-y-4 text-gray-300 text-base">
+                    <div class="flex items-start gap-3">
+                        <span class="text-blue-400 mt-1"><i class="fa-regular fa-circle-check"></i></span>
+                        <p><strong class="text-white">Sharding & Routing:</strong> Explored core horizontal sharding strategies across distributed MySQL clusters using Redis for dynamic cache-routing layers.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-blue-400 mt-1"><i class="fa-regular fa-circle-check"></i></span>
+                        <p><strong class="text-white">Smart ID Generation:</strong> Architected a high-velocity 16-digit K-Ordered Sequential ID Generator using Timestamp + Shard ID + Redis hashes to ensure cross-node data unique indexing without collision.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-blue-400 mt-1"><i class="fa-regular fa-circle-check"></i></span>
+                        <p><strong class="text-white">Optimized Auth Strategy:</strong> Maximized system throughput with optimized Redis-backed stateless authentication mechanisms to safely eliminate repetitive database overheads.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-blue-400 mt-1"><i class="fa-regular fa-circle-check"></i></span>
+                        <p><strong class="text-white">Reliable Data Consistency:</strong> Designed cursor-based pagination wrappers ensuring absolute real-time structural consistency across distributed asynchronous sharding structures.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-blue-400 mt-1"><i class="fa-regular fa-circle-check"></i></span>
+                        <p><strong class="text-white">Asynchronous Pipeline:</strong> Successfully integrated resilient RabbitMQ and Redis Queue infrastructures for fast asynchronous automated massive dataset handling pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. COMMERCIAL PROJECTS & EXPERIENCE SECTION -->
+        <section id="experience" class="py-24 max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-2">Professional Experience</h2>
+                <p class="text-gray-400">Commercial projects and systems I have engineered successfully</p>
+            </div>
+
+            <!-- Timeline Experience Container -->
+            <div class="space-y-12">
+                
+                <!-- Company 1 -->
+                <div class="border-l-2 border-blue-500/30 pl-6 md:pl-10 relative">
+                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1.5 border-4 border-slate-900"></div>
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Software Engineer (Remote)</h3>
+                            <p class="text-gray-400 font-medium">Amharc Tech, Dublin, Ireland</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                            MAY 2021 - PRESENT
+                        </span>
+                    </div>
+
+                    <!-- Company 1 - Projects Stack inside -->
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">AT SMS-Servicing SaaS</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">NestJS, Next.js, Laravel, MySQL, MongoDB</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Transformed field service management. Engineered core scalable microservices using NestJS and Laravel to manage full job cycles, built dynamic Form Builders with state validations, and introduced an automated conflict-free shift scheduling engine.
+                            </p>
+                        </div>
+
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">AT POS - Smart Point of Sale</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">NestJS, Next.js, Laravel, MySQL, Nginx</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Enabled modern high-speed enterprise inventory tracking featuring smart product batch tracking, automated vendor updates coordination, multi-tier automated split-payment frameworks, and dynamic security access structures.
+                            </p>
+                        </div>
+
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">Ebaskat - Dropshipping Platform</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">PHP, Laravel, Lumen, MySQL, Queues, Cron Job</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Managed core system engineering syncing AliExpress and BigBuy APIs. Authored a proprietary custom structural Data Sync Service handler handling inventory fluctuations, automated dynamic price logic engines, and structural failed sync alerts.
+                            </p>
+                        </div>
+
+                        <div class="premium-card p-6 rounded-xl">
+                            <h4 class="text-lg font-bold text-white mb-1">Subscription Management System</h4>
+                            <p class="text-xs text-blue-400 font-medium mb-3">Laravel, Inertia.js, React.js, Stripe</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Developed multi-tier dynamic subscription layers with robust Stripe integrations. Managed automated user billing states change triggers on downgrade/expiry events, webhook systems tracking, and reactive Inertia-driven full SPA dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company 2 -->
+                <div class="border-l-2 border-slate-700 pl-6 md:pl-10 relative">
+                    <div class="absolute w-4 h-4 bg-slate-700 rounded-full -left-[9px] top-1.5 border-4 border-slate-900"></div>
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Junior Software Engineer</h3>
+                            <p class="text-gray-400 font-medium">RD Network BD, Mirpur 1, Dhaka</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-gray-500/10 text-gray-400 border border-gray-700">
+                            FEB 2020 - MAY 2021
+                        </span>
+                    </div>
+                    
+                    <div class="premium-card p-6 rounded-xl mt-4 max-w-2xl">
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Developed modular inventory POS frameworks, integrated human resource metrics trackers, and designed vehicle maintenance dynamic asset allocation interfaces using automated Laravel and asynchronous AJAX structures.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 6. CONTACT ME SECTION -->
+        <section id="contact" class="py-24 max-w-4xl mx-auto px-6 text-center">
+            <div class="premium-card p-10 rounded-3xl border border-white/5">
+                <h2 class="text-3xl font-bold mb-2">Let's Connect</h2>
+                <p class="text-gray-400 mb-8 max-w-md mx-auto">Whether you want to discuss a system scalability problem or an exciting enterprise project, drop me a message.</p>
+                
+                <!-- Social & Communication Grid Buttons -->
+                <div class="flex flex-wrap justify-center gap-6 text-2xl mb-10">
+                    <a href="mailto:moinulibr@gmail.com" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 transition-all duration-300" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-blue-500 hover:text-white hover:bg-blue-600 transition-all duration-300" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-white hover:bg-slate-700 transition-all duration-300" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <p class="text-xs text-gray-500">Designed natively as a Single Page Application for recruiters and engineering managers.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 text-sm text-gray-600 border-t border-white/5">
+            &copy; 2026 Md. Moinul Islam. All rights reserved.
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Configurations Engine -->
+    <script>
+        // 1. Fully Integrated Typewriter Feature via Typed.js
+        var typed = new Typed('#typed-text', {
+            strings: [
+                'Full-Stack Engineer.',
+                'Backend System Architect.', 
+                'SaaS & Microservices Expert.',
+                'Scalability Enthusiast.'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+            cursorChar: '|'
+        });
+
+        // 2. Interactive Premium Moving Background Nodes/Points
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 90, 
+                    "density": { "enable": true, "value_area": 900 }
+                },
+                "color": { "value": "#3b82f6" }, 
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+                },
+                "size": {
+                    "value": 3.5,
+                    "random": true,
+                    "anim": { "enable": false }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 140,
+                    "color": "#1e293b", 
+                    "opacity": 0.6,
+                    "width": 1.2
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.8, 
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }, 
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 150, "line_linked": { "opacity": 0.8 } }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>

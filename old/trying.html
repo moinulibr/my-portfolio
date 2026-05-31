@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Moinul Islam | Portfolio</title>
+    <!-- Tailwind CSS for Premium Layout -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Particles.js for Moving Points Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Typed.js for Typewriter Effect -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+        /* Premium Dark Theme styling overrides */
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Puts background behind content */
+            pointer-events: none;
+        }
+        .content-container {
+            position: relative;
+            z-index: 10;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Layer (Moving Points/Particles) -->
+    <div id="particles-js"></div>
+
+    <!-- Content Layer -->
+    <div class="content-container min-h-screen flex flex-col justify-center items-center px-6">
+        
+        <!-- Hero Section -->
+        <header class="text-center max-w-3xl">
+            <!-- Profile Image Holder (Optional placeholder based on your picture) -->
+            <div class="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-blue-500/30 overflow-hidden shadow-xl shadow-blue-500/10">
+                <img src="your-image.jpg" alt="Md. Moinul Islam" class="w-full h-full object-cover">
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-3">
+                Hi, I'm <span class="gradient-text">Md. Moinul Islam</span>
+            </h1>
+            
+            <!-- Typing/Moving Text Animation -->
+            <div class="text-xl md:text-2xl font-medium text-gray-400 h-10 mb-6">
+                I am a <span id="typed-text" class="text-blue-400 border-b-2 border-blue-400 pb-1"></span>
+            </div>
+
+            <p class="text-gray-400 md:text-lg max-w-xl mx-auto leading-relaxed mb-8">
+                Software Engineer specialized in building highly scalable database architectures, enterprise SaaS products, and resilient microservices.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 font-semibold text-white shadow-lg shadow-blue-600/20 hover:scale-105 transition-all duration-300">
+                    View My Work
+                </a>
+                <a href="mailto:moinulibr@gmail.com" class="px-6 py-3 rounded-xl bg-gray-800/80 border border-gray-700 font-semibold hover:bg-gray-700/80 transition-all duration-300">
+                    Contact Me
+                </a>
+            </div>
+        </header>
+
+    </div>
+
+    <!-- JavaScript For Animations -->
+    <script>
+        // 1. Typewriter Effect Configuration
+        var typed = new Typed('#typed-text', {
+            strings: [
+                'Software Engineer.', 
+                'Backend System Architect.', 
+                'SaaS & Microservices Expert.',
+                'Scalability Enthusiast.'
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true,
+            cursorChar: '|'
+        });
+
+        // 2. Particles.js Configuration (Moving points/stars in background)
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80, // Number of moving points
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#60a5fa" }, // Light blue points
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.4,
+                    "random": true,
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": { "enable": false }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#334155", // Subtle connecting lines
+                    "opacity": 0.3,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2, // Speed of movement
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }, // Interacts when hovering
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
