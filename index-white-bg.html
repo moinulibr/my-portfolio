@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Md. Moinul Islam · Senior Backend Engineer · Scalability Expert</title>
+  <!-- Google Fonts + Premium Font Pairing -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9fafc;
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* animated gradient backdrop */
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 20% 30%, rgba(0, 100, 220, 0.03), transparent 70%);
+    }
+
+    /* container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* ========= TYPING / MOVING DOTS (backend flow effect) ========= */
+    .moving-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: #eef2ff;
+      padding: 6px 14px;
+      border-radius: 40px;
+      width: fit-content;
+      color: #1e40af;
+      letter-spacing: 0.3px;
+      border: 1px solid rgba(59,130,246,0.2);
+    }
+    .dot-animate {
+      display: flex;
+      gap: 4px;
+      margin-left: 6px;
+    }
+    .dot-animate span {
+      width: 5px;
+      height: 5px;
+      background-color: #2563eb;
+      border-radius: 50%;
+      animation: pulseDot 1.2s infinite ease-in-out;
+    }
+    .dot-animate span:nth-child(2) { animation-delay: 0.2s; }
+    .dot-animate span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 0.3; transform: scale(0.8);}
+      50% { opacity: 1; transform: scale(1.2); background-color: #3b82f6;}
+    }
+
+    /* typing cursor effect */
+    .typed-badge {
+      background: #111827;
+      color: #e5e7eb;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 5px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #334155;
+    }
+    .cursor-blink {
+      width: 2px;
+      height: 18px;
+      background-color: #60a5fa;
+      display: inline-block;
+      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* header cards */
+    .header-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2rem 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.02);
+      border: 1px solid #eef2ff;
+    }
+    .profile-left {
+      flex: 2;
+    }
+    .profile-right {
+      flex-shrink: 0;
+    }
+    .avatar {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 15px 35px -10px rgba(0,0,0,0.1);
+      background: #f3f4f6;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.25rem;
+    }
+    .title-tag {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #334155;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1rem 0 0.8rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f8fafc;
+      padding: 6px 14px;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: #1f2937;
+      border: 1px solid #e2e8f0;
+    }
+    .contact-item i {
+      color: #2563eb;
+      font-size: 1rem;
+    }
+    .contact-item:hover {
+      background: #eef2ff;
+      border-color: #b9d0f8;
+      transform: translateY(-2px);
+    }
+
+    /* section titles */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 2rem 0 1.2rem 0;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 5px solid #2563eb;
+      padding-left: 20px;
+    }
+
+    /* skills chips + moving dot integrated */
+    .skills-wrapper {
+      background: white;
+      border-radius: 2rem;
+      padding: 1.8rem;
+      border: 1px solid #eef2ff;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    }
+    .skill-category {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    .skill-badge {
+      background: #f1f5f9;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      border: 1px solid #e4e9f2;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -0.2px;
+    }
+    .skill-badge i {
+      margin-right: 6px;
+      font-size: 0.8rem;
+      color: #2563eb;
+    }
+
+    /* project / experience cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.8rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      background: white;
+      border-radius: 1.8rem;
+      padding: 1.6rem;
+      transition: all 0.25s ease;
+      border: 1px solid #eef2ff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+      border-color: #cbdffc;
+    }
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .tech-stack {
+      margin: 0.8rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tech-stack span {
+      background: #eef2ff;
+      border-radius: 30px;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: monospace;
+      color: #1e40af;
+    }
+    .card-desc {
+      color: #334155;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    /* moving dot row (backend infinity) */
+    .moving-backend-row {
+      margin: 2.8rem 0 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    .backend-flow {
+      background: #0f172a;
+      padding: 12px 28px;
+      border-radius: 80px;
+      display: inline-flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+    }
+    .flow-item {
+      color: #94a3b8;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-size: 0.9rem;
+    }
+    .flow-arrow {
+      color: #3b82f6;
+      font-size: 1rem;
+    }
+    .flow-dot {
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseMove 1.4s infinite;
+    }
+    @keyframes pulseMove {
+      0% { opacity: 0.4; transform: scale(0.8); box-shadow: 0 0 0 0 #3b82f6; }
+      70% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 0 5px rgba(59,130,246,0.3);}
+      100% { opacity: 0.4; transform: scale(0.8);}
+    }
+
+    /* for mobile responsiveness */
+    @media (max-width: 780px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 2rem; }
+      .header-grid { flex-direction: column; text-align: center; }
+      .contact-info { justify-content: center; }
+      .section-title { font-size: 1.5rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .backend-flow { flex-direction: column; gap: 12px; padding: 20px; border-radius: 2rem; }
+      .flow-arrow { transform: rotate(90deg); }
+    }
+
+    /* extra goodies */
+    .highlight-text {
+      background: linear-gradient(120deg, #dbeafe 0%, #dbeafe 40%, transparent 80%);
+      padding: 0 6px;
+      font-weight: 600;
+    }
+    .resume-badge {
+      display: inline-block;
+      background: #000;
+      color: white;
+      padding: 0.3rem 1rem;
+      border-radius: 32px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      color: #4b5563;
+      font-size: 0.8rem;
+    }
+    a {
+      text-decoration: none;
+    }
+    button, .fake-input {
+      background: none;
+      border: none;
+    }
+    /* typing area for demo - anywhere you click "typing happens" effect*/
+    .type-demo-area {
+      margin-top: 2rem;
+      background: #ffffffcc;
+      backdrop-filter: blur(2px);
+      border-radius: 50px;
+      padding: 6px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid #bfdbfe;
+    }
+    .type-demo-area span {
+      font-family: monospace;
+      font-weight: 500;
+    }
+    #dynamicTyping {
+      min-width: 240px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="container">
+  
+  <!-- Header + Profile Section -->
+  <div class="header-grid">
+    <div class="profile-left">
+      <div class="moving-dots">
+        <span>⚡ backend active</span>
+        <div class="dot-animate"><span></span><span></span><span></span></div>
+      </div>
+      <h1>Md. Moinul Islam</h1>
+      <div class="title-tag">
+        <span>Senior Software Engineer (Backend-Focused)</span>
+        <span class="typed-badge">5+ years scalable systems <span class="cursor-blink"></span></span>
+      </div>
+      <div class="contact-info">
+        <a href="mailto:moinulibr@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> moinulibr@gmail.com</a>
+        <a href="tel:+8801712794033" class="contact-item"><i class="fas fa-phone-alt"></i> +880 1712794033</a>
+        <a href="https://github.com/moinulibr" target="_blank" class="contact-item"><i class="fab fa-github"></i> github/moinulibr</a>
+        <a href="https://www.linkedin.com/in/moinulibr/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> linkedin/in/moinulibr</a>
+      </div>
+      <div class="type-demo-area" style="margin-top: 1rem;">
+        <i class="fas fa-terminal" style="color:#2563eb"></i>
+        <span>$</span>
+        <span id="dynamicTyping">npm run backend:scalable</span>
+        <div class="cursor-blink" style="background:#2563eb"></div>
+      </div>
+    </div>
+    <div class="profile-right">
+      <!-- local profile image -->
+      <img src="my-profile-picture.png" alt="Moinul Islam" class="avatar" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?background=0D8F81&color=fff&name=Moinul+Islam&size=140';">
+    </div>
+  </div>
+
+  <!-- MOVING BACKEND DOTS (dynamic visual flow) - always moving left to right style -->
+  <div class="moving-backend-row">
+    <div class="backend-flow">
+      <span class="flow-item"><i class="fas fa-database"></i> Sharding</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-item"><i class="fas fa-code-branch"></i> Partitioning</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-item"><i class="fas fa-redo-alt"></i> Replication</span>
+      <span class="flow-arrow">→</span>
+      <div class="flow-dot"></div>
+      <span class="flow-item"><i class="fas fa-microchip"></i> 1B+ Concepts</span>
+      <span class="flow-arrow">→</span>
+      <div class="dot-animate" style="margin-left: 0;"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  
+  <!-- Technical skills with dot motion integrated -->
+  <div class="skills-wrapper">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <h2 style="font-size: 1.5rem; font-weight: 700;">⚙️ Engineering Stack</h2>
+      <div class="moving-dots"><span>always evolving</span><div class="dot-animate"><span></span><span></span><span></span></div></div>
+    </div>
+    <div class="skill-category">
+      <span class="skill-badge"><i class="fab fa-php"></i> PHP (Laravel/Lumen)</span>
+      <span class="skill-badge"><i class="fab fa-node-js"></i> Node.js / NestJS</span>
+      <span class="skill-badge"><i class="fab fa-react"></i> React / Next.js</span>
+      <span class="skill-badge"><i class="fas fa-database"></i> MySQL / PostgreSQL</span>
+      <span class="skill-badge"><i class="fas fa-database"></i> MongoDB / Redis</span>
+      <span class="skill-badge"><i class="fas fa-chart-line"></i> Sharding/Partitioning</span>
+      <span class="skill-badge"><i class="fas fa-cloud"></i> Microservices / SaaS</span>
+      <span class="skill-badge"><i class="fab fa-docker"></i> Docker / Nginx</span>
+      <span class="skill-badge"><i class="fas fa-tasks"></i> RabbitMQ / Redis Queues</span>
+      <span class="skill-badge"><i class="fas fa-key"></i> JWT / OAuth2</span>
+    </div>
+  </div>
+  
+  <!-- KEY PROJECTS (Scalability Research) -->
+  <div class="section-title"><i class="fas fa-flask"></i> Scalability Research · OmniShard-1B</div>
+  <div class="card" style="margin-bottom: 1rem;">
+    <div class="card-title">🧠 OmniShard | 1B+ Scalable DB Architecture <span class="resume-badge">research concept</span></div>
+    <div class="tech-stack"><span>MySQL</span><span>Redis</span><span>Custom 16-digit K-Ordered ID</span><span>Cursor Pagination</span><span>Async Queues</span></div>
+    <div class="card-desc">
+      Sharding strategies using MySQL + Redis for billion-scale distribution. Built smart ID generator (timestamp + shard ID + Redis) to maintain uniqueness across nodes. Optimized stateless authentication using Redis, cursor-based pagination for cross-shard consistency, and integrated RabbitMQ/Redis queues for high-volume ingestion.
+      <br><strong>Future scope:</strong> real-time chat, notification engines, metadata layer scaling.
+    </div>
+  </div>
+  
+  <!-- PROFESSIONAL EXPERIENCE (MAIN) -->
+  <div class="section-title"><i class="fas fa-briefcase"></i> Lead Experience · Amharctech (Remote, Ireland)</div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">📱 AT SMS · Field Service SaaS <span style="font-size:0.7rem;">NestJS · Next.js · Laravel</span></div>
+      <div class="tech-stack"><span>Microservices</span><span>JWT</span><span>MySQL/MongoDB</span><span>Twilio</span><span>Nginx</span></div>
+      <div class="card-desc">
+        Engineered core microservices for job lifecycle, assignment tracking, feedback. Built dynamic Form Builder with conditional logic. Developed Rota microservice (conflict-free scheduling + RBAC). Backend-driven high-performance REST APIs.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">💳 AT POS · Smart Point of Sale <span style="font-size:0.7rem;">NestJS · Laravel · MySQL</span></div>
+      <div class="tech-stack"><span>Batch Tracking</span><span>Real-time Analytics</span><span>Split Payments</span><span>ACL</span></div>
+      <div class="card-desc">
+        Inventory management with batch tracking, vendor coordination. Real-time sales analytics, split payments & access level control. Integrated microservices architecture and system orchestration.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">📦 Ebaskat · Dropshipping E‑commerce <span style="font-size:0.7rem;">Laravel · Lumen · Queue Jobs</span></div>
+      <div class="tech-stack"><span>AliExpress/BigBuy API</span><span>Data Sync Service</span><span>Cron</span><span>Stripe</span></div>
+      <div class="card-desc">
+        Led backend + automation: product import, order placement, inventory sync from AliExpress/BigBuy. Built real-time Data Sync Service (Laravel Jobs & Queues). Reduced redundant sync load, created admin control panel for pricing rules.
+      </div>
+    </div>
+  </div>
+  
+  <!-- Subscription + early career -->
+  <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="card">
+      <div class="card-title">💸 Subscription Management System <span class="resume-badge">Stripe · Inertia.js</span></div>
+      <div class="tech-stack"><span>Laravel</span><span>React</span><span>Webhooks</span><span>Recurring Billing</span></div>
+      <div class="card-desc">
+        Built full billing automation: Stripe integration, recurring payments + webhook sync. Automated status changes (upgrade/expiry/cancellation). User dashboard with Inertia+React for invoice history and plan management.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">📁 Early Career · RD Network BD <span>Junior Engineer</span></div>
+      <div class="tech-stack"><span>Laravel</span><span>MySQL</span><span>AJAX</span><span>Inventory POS</span></div>
+      <div class="card-desc">
+        Developed modular inventory POS, HR Logistics & courier management. Built vehicle maintenance tracker with dynamic real-time AJAX forms.
+        <br><strong>Role:</strong> Module development & backend optimization.
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional Architecture Highlights: Microservices, message queues, Realtime -->
+  <div class="section-title"><i class="fas fa-network-wired"></i> Core Architecture & Integrations</div>
+  <div class="skills-wrapper" style="background: #ffffff;">
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between;">
+      <div><i class="fas fa-check-circle" style="color:#2563eb;"></i> Microservices (NestJS / Laravel)</div>
+      <div><i class="fas fa-check-circle" style="color:#2563eb;"></i> Redis / RabbitMQ async processing</div>
+      <div><i class="fas fa-check-circle" style="color:#2563eb;"></i> Cursor-based Pagination (Cross-shard)</div>
+      <div><i class="fas fa-check-circle" style="color:#2563eb;"></i> Stripe + Mailgun + Twilio integration</div>
+      <div><i class="fas fa-check-circle" style="color:#2563eb;"></i> Stateless Auth / JWT & OAuth2</div>
+      <div><i class="fas fa-check-circle" style="color:#2563eb;"></i> Dockerized Deployment & Nginx</div>
+    </div>
+  </div>
+  
+  <!-- Moving Dots + Typing interactive - dynamic inline -->
+  <div style="margin: 2.5rem 0 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+    <div class="moving-dots">
+      <i class="fas fa-terminal"></i> 
+      <span>backend pipeline monitoring</span>
+      <div class="dot-animate"><span></span><span></span><span></span></div>
+    </div>
+    <div class="typed-badge" style="background: #1e293b;">
+      <i class="fas fa-code"></i> 
+      <span id="rotatingTech">sharding_strategy.active</span>
+      <span class="cursor-blink"></span>
+    </div>
+  </div>
+  
+  <!-- Education + freelance ready -->
+  <div class="card-grid" style="grid-template-columns: 1fr 1fr; margin-top: 0.5rem;">
+    <div class="card">
+      <div class="card-title"><i class="fas fa-graduation-cap"></i> Education</div>
+      <div style="font-weight: 600;">B.Sc in Computer Science & Engineering</div>
+      <div>Fareast International University · 2016 – 2020</div>
+      <div style="margin-top: 12px;"><i class="fas fa-trophy"></i> Focus: Distributed Systems, Database Architecture, Scalability</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="fas fa-rocket"></i> Freelance Readiness (Upwork / Fiverr)</div>
+      <div class="card-desc">
+        ✅ Expert in Laravel, NestJS, microservices, payment integration, SaaS architecture<br>
+        ✅ Scalability consulting (sharding/partitioning, Redis, queue-driven systems)<br>
+        ✅ Real-time & async processing · API design · Third-party API integrations<br>
+        ✅ Available for contract roles, high-performance backend systems, and automation.
+      </div>
+      <div class="moving-dots" style="margin-top: 15px;">
+        <span>available for hire</span>
+        <div class="dot-animate"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p><i class="fas fa-dharmachakra"></i> Always building resilient, sharded, event-driven architectures · Let's connect: moinulibr@gmail.com · <span id="liveYear"></span></p>
+    <p style="font-size:0.7rem; margin-top:6px;">📍 Dhaka, Bangladesh · Remote worldwide · Backend-first mindset with production-grade microservices</p>
+  </footer>
+</div>
+
+<script>
+  // dynamic typing rotation (backend phrases) + "khothaw o typing hoi kno likha" 
+  const typingElement = document.getElementById('dynamicTyping');
+  const rotatingTechSpan = document.getElementById('rotatingTech');
+  const phrases = [
+    "npm run start:prod",
+    "sharding_manager.execute()",
+    "kafka:consumer -> sync",
+    "docker-compose up --scale",
+    "cursor_paginate(1B_rows)",
+    "redis_cache_warmer()",
+    "async queue dispatch",
+    "git commit -m 'perf++'"
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  
+  function typeEffect() {
+    if (!typingElement) return;
+    const current = phrases[phraseIndex];
+    if (isDeleting) {
+      typingElement.textContent = current.substring(0, charIndex-1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 200);
+        return;
+      }
+    } else {
+      typingElement.textContent = current.substring(0, charIndex+1);
+      charIndex++;
+      if (charIndex === current.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1800);
+        return;
+      }
+    }
+    setTimeout(typeEffect, isDeleting ? 60 : 100);
+  }
+  
+  // secondary rotating tech status
+  const techTerms = ["sharding.active", "redis.cursor", "microservices.healthy", "async.queue.processor", "nestJS.api_gateway", "laravel.octane"];
+  let techIdx = 0;
+  function rotateTerm() {
+    if(rotatingTechSpan) {
+      rotatingTechSpan.textContent = techTerms[techIdx];
+      techIdx = (techIdx + 1) % techTerms.length;
+    }
+    setTimeout(rotateTerm, 2200);
+  }
+  
+  // dynamic year
+  document.getElementById('liveYear').innerText = new Date().getFullYear();
+  
+  // start typing animation
+  setTimeout(() => {
+    if(typingElement) typeEffect();
+    rotateTerm();
+  }, 200);
+  
+  // Additional: interactive console message (backend ready)
+  console.log("%c🔥 Moinul's Portfolio: Backend-heavy, sharding-ready, world-class ready for Upwork/Fiverr", "color: #0f172a; background: #eef2ff; font-size: 14px; padding: 6px;");
+  
+  // ADDED: any click on .moving-dots or specific areas simulates a "typing" presence? But requirement: "khothaw o typing hoi kno likha jeno seta o raikho, phone o raikho"
+  // i will add a micro interaction: clicking on any moving-dots badge or backend flow will trigger a temporary typed console message & tooltip style but requirement fullfilled: any typing appears both on desktop and mobile.
+  document.querySelectorAll('.moving-dots, .backend-flow, .typed-badge').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const fakeMsg = "➜ backend~$ listening for events · shard key selected";
+      const tempDiv = document.createElement('div');
+      tempDiv.innerText = fakeMsg;
+      tempDiv.style.position = 'fixed';
+      tempDiv.style.bottom = '20px';
+      tempDiv.style.left = '20px';
+      tempDiv.style.backgroundColor = '#0f172a';
+      tempDiv.style.color = '#a5f3fc';
+      tempDiv.style.fontFamily = 'monospace';
+      tempDiv.style.padding = '8px 16px';
+      tempDiv.style.borderRadius = '40px';
+      tempDiv.style.fontSize = '0.8rem';
+      tempDiv.style.zIndex = '999';
+      tempDiv.style.border = '1px solid #3b82f6';
+      tempDiv.style.boxShadow = '0 6px 14px rgba(0,0,0,0.2)';
+      document.body.appendChild(tempDiv);
+      setTimeout(() => tempDiv.remove(), 2000);
+    });
+  });
+</script>
+</body>
+</html>
